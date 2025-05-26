@@ -1,0 +1,3 @@
+<template>
+    otp-verify
+</template>

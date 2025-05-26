@@ -1,14 +1,43 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Login from './pages/Login.vue'
-import Register from './pages/Register.vue'
+import MainLayout from './components/layout/MainLayout.vue'
+import Login from './pages/auth/Login.vue'
+import Register from './pages/auth/Register.vue'
 import Dashboard from './pages/Dashboard.vue'
-import Home from './pages/Home.vue'
+import AuthService from './pages/service/AuthService.vue'
+import ProfileService from './pages/service/ProfileService.vue'
+import NotificationService from './pages/service/NotificationService.vue'
+import CartService from './pages/service/CartService.vue'
+import OrderService from './pages/service/OrderService.vue'
+import PaymentService from './pages/service/PaymentService.vue'
 
 const routes = [
-  { path: '/', component: Home },
-  { path: '/login', component: Login },
-  { path: '/register', component: Register },
-  { path: '/dashboard', component: Dashboard },
+  { path: '/', redirect: '/dashboard' },
+
+  {
+    path: '/auth',
+    children: [
+      { path: 'login', component: Login },
+      { path: 'register', component: Register },
+    ],
+  },
+  {
+    path: '/',
+    component: MainLayout,  
+    children: [
+      { path: 'dashboard', component: Dashboard },
+      {
+        path: 'service',
+        children: [
+          { path: 'auth-service', component: AuthService },
+          { path: 'profile-service', component: ProfileService },
+          { path: 'notification-service', component: NotificationService },
+          { path: 'cart-service', component: CartService },
+          { path: 'order-service', component: OrderService },
+          { path: 'payment-service', component: PaymentService },
+        ],
+      },
+    ],
+  },
 ]
 
 const router = createRouter({
@@ -16,14 +45,5 @@ const router = createRouter({
   routes,
   linkActiveClass: 'font-bold underline',
 })
-
-// router.beforeEach((to, from, next) => {
-//   const token = localStorage.getItem('access_token')
-//   if (to.path === '/dashboard' && !token) {
-//     next('/login')
-//   } else {
-//     next()
-//   }
-// })
 
 export default router

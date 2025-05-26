@@ -1,12 +1,11 @@
 <template>
-  <div :class="`flex flex-col bg-gray-800 text-gray-400 transition-all duration-300 ${open ? 'w-52' : 'w-12'} h-screen`">
+  <div :class="`flex flex-col bg-gray-100 shadow-xl text-gray-400 transition-all duration-300 ${open ? 'w-52' : 'w-14'} h-screen`">
     <div class="flex items-center justify-start p-4">
-      <button @click="open = !open" class="text-white mr-2">
-        <FiMenu class="text-xl" />
+      <button @click="open = !open" class="text-black mr-2">
+        <Icon icon="mdi:menu" class="text-xl cursor-pointer" />
       </button>
       <div v-if="open" class="flex items-center">
-        <img src="../../assets/Banner.png" alt="logo" class="w-8 h-8 mr-2" />
-        <p class="text-orange-500 text-lg font-bold">E-Mentor</p>
+        <img src="../../assets/Banner.png" alt="logo" class="w-48 h-10 mr-2" />
       </div>
     </div>
 
@@ -16,38 +15,37 @@
       <router-link
         v-for="link in navLinks"
         :key="link.path"
-        :to="`/${link.path}`"
-        class="flex items-center p-3 hover:bg-orange-500 hover:text-white cursor-pointer text-sm"
-        :class="route.path === `/${link.path}` ? 'bg-orange-500 text-white' : ''"
-      >
-        <component :is="link.icon" />
-        <span v-if="open" class="ml-3">{{ link.label }}</span>
-      </router-link>
+        :to="link.path"
+        class="flex items-center p-3 hover:bg-green-200 m-1 hover:rounded-xl hover:text-white cursor-pointer text-sm"
+        :class="route.path === link.path ? 'bg-green-400 m-1 rounded-xl text-white' : ''"
+        >
+            <Icon :icon="link.icon" class="text-lg text-black" />
+            <span v-if="open" class="ml-3 text-black semi-bold">{{ link.label }}</span>
+        </router-link>
     </div>
-    <div class="flex justify-center items-center py-2 hover:bg-orange-500 hover:text-white cursor-pointer">
-      <PiSignOut />
-      <span v-if="open" class="ml-3">Sign Out</span>
+    <div class="flex semi-bold text-black justify-center items-center py-2 hover:bg-green-300 cursor-pointer">
+        <Icon icon="mdi:logout" class="text-lg" />
+        <span v-if="open" class="ml-3">Sign Out</span>
     </div>
   </div>
+  
 </template>
 
-<script lang="js">
+<script setup>
 import { ref } from 'vue'
 import { useRoute } from 'vue-router'
-import { PiSignOut } from 'react-icons/pi'
-import { AiOutlineDashboard } from 'react-icons/ai';
-import { FaUserShield, FaBell, FaShoppingCart, FaClipboardList, FaCreditCard, FaCogs } from 'react-icons/fa';
+import { Icon } from '@iconify/vue'
 
-const open = ref(true)
+const open = ref(false)
 const route = useRoute()
 
-export const navLinks = [
-  { label: 'Dashboard', icon: AiOutlineDashboard, path: '/dashboard' },
-  { label: 'Auth Service', icon: FaUserShield, path: '/auth-service' },
-  { label: 'Profile Service', icon: FaCogs, path: '/profile-service' },
-  { label: 'Notification Service', icon: FaBell, path: '/notification-service' },
-  { label: 'Cart Service', icon: FaShoppingCart, path: '/cart-service' },
-  { label: 'Order Service', icon: FaClipboardList, path: '/order-service' },
-  { label: 'Payment Service', icon: FaCreditCard, path: '/payment-service' },
-];
+const navLinks = [
+  { label: 'Dashboard', icon: 'mdi:view-dashboard', path: '/dashboard' },
+  { label: 'Auth Service', icon: 'mdi:shield-account', path: '/service/auth-service' },
+  { label: 'Profile Service', icon: 'mdi:account-cog', path: '/service/profile-service' },
+  { label: 'Notification Service', icon: 'mdi:bell', path: '/service/notification-service' },
+  { label: 'Cart Service', icon: 'mdi:cart', path: '/service/cart-service' },
+  { label: 'Order Service', icon: 'mdi:clipboard-list', path: '/service/order-service' },
+  { label: 'Payment Service', icon: 'mdi:credit-card', path: '/service/payment-service' },
+]
 </script>
