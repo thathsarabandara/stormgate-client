@@ -1,0 +1,3 @@
+<template>
+    profile-service
+</template>
