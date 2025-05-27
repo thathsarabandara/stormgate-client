@@ -9,6 +9,10 @@ import NotificationService from './pages/service/NotificationService.vue'
 import CartService from './pages/service/CartService.vue'
 import OrderService from './pages/service/OrderService.vue'
 import PaymentService from './pages/service/PaymentService.vue'
+import ForgotPassword from './pages/auth/ForgotPassword.vue'
+import ForgotPasswordOTP from './pages/auth/ForgotPasswordOTP.vue'
+import OTPVerify from './pages/auth/OTPVerify.vue'
+import ResetPassowrd from './pages/auth/ResetPassword.vue'
 
 const routes = [
   { path: '/', redirect: '/dashboard' },
@@ -18,6 +22,10 @@ const routes = [
     children: [
       { path: 'login', component: Login },
       { path: 'register', component: Register },
+      { path: 'forgot-password', component: ForgotPassword },
+      { path: 'forgot-password-otp', component: ForgotPasswordOTP },
+      { path: 'reset-password', component: ResetPassowrd },
+      { path: 'otp-verify', component: OTPVerify }
     ],
   },
   {
