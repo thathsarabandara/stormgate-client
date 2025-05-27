@@ -19,23 +19,20 @@
   </div>
 </template>
 
-<script lang="ts" setup>
-import { defineProps, defineEmits } from 'vue';
+<script setup>
+import { defineProps, defineEmits } from 'vue'
 
-const props = defineProps<{
-  label: string;
-  error?: string;
-  type: string;
-  placeholder?: string;
-  value: string;
-}>();
+const props = defineProps({
+  label: String,
+  error: String,
+  type: String,
+  placeholder: String,
+  value: [String, Number],
+})
 
-const emit = defineEmits<{
-  (e: 'update:value', value: string): void;
-}>();
+const emit = defineEmits(['update:value'])
 
-const onInput = (e: Event) => {
-  const target = e.target as HTMLInputElement;
-  emit('update:value', target.value);
-};
+const onInput = (e) => {
+  emit('update:value', e.target.value)
+}
 </script>
