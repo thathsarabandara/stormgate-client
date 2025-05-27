@@ -1,5 +1,5 @@
 <template>
-  <div :class="`flex flex-col bg-gray-100 shadow-xl text-gray-400 transition-all duration-300 ${open ? 'w-52' : 'w-14'} h-screen`">
+  <div :class="`flex flex-col fixed top-0 left bg-gray-100 shadow-xl text-gray-400 transition-all duration-300 ${open ? 'w-52' : 'w-14'} h-screen`">
     <div class="flex items-center justify-start p-2">
       <button @click="open = !open" class="text-black">
         <img 
