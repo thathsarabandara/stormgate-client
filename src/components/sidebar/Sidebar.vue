@@ -1,8 +1,11 @@
 <template>
   <div :class="`flex flex-col bg-gray-100 shadow-xl text-gray-400 transition-all duration-300 ${open ? 'w-52' : 'w-14'} h-screen`">
-    <div class="flex items-center justify-start p-4">
-      <button @click="open = !open" class="text-black mr-2">
-        <Icon icon="mdi:menu" class="text-xl cursor-pointer" />
+    <div class="flex items-center justify-start p-2">
+      <button @click="open = !open" class="text-black">
+        <img 
+            class="w-12 h-8"
+            src="../../assets//LogoBlack.png"
+        />
       </button>
       <div v-if="open" class="flex items-center">
         <img src="../../assets/Banner.png" alt="logo" class="w-48 h-10 mr-2" />
@@ -28,7 +31,7 @@
         <span v-if="open" class="ml-3">Sign Out</span>
     </div>
   </div>
-  
+
 </template>
 
 <script setup>
