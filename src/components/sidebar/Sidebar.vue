@@ -3,7 +3,7 @@
     <div class="flex items-center justify-start p-2">
       <button @click="open = !open" class="text-black">
         <img 
-            class="w-12 h-8"
+            class="w-12 h-8 my-2"
             src="../../assets//LogoBlack.png"
         />
       </button>

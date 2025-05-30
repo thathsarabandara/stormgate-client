@@ -11,6 +11,3 @@
 import Sidebar from '../sidebar/Sidebar.vue'
 </script>
 
-<style>
-
-</style>
