@@ -5,7 +5,7 @@
     </p>
 
     <div class="flex items-center space-x-4 sm:space-x-6 md:space-x-7 mt-2 sm:mt-0">
-      <div class="flex flex-col items-start hidden lg:block">
+      <div class="flex-col items-start hidden lg:flex">
         <p class="text-xs font-bold text-gray-500">
           Welcome
         </p>
