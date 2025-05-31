@@ -15,6 +15,26 @@
                 <DoughnutChart />
             </div>
         </div>
+        <div class="flex w-full mt-4 gap-3">
+            <div class="rounded-xl w-1/2">
+                <LineChart
+                    chartTitle="Total CPU Usage"
+                    label="CPU Usage (%)"
+                    :usageData="cpuUsage"
+                    borderColor="rgba(255, 99, 132, 1)"
+                    backgroundColor="rgba(255, 99, 132, 0.2)"
+                />
+            </div>
+            <div class="rounded-xl w-1/2">
+                <LineChart
+                    chartTitle="Total RAM Usage"
+                    label="RAM Usage (%)"
+                    :usageData="ramUsage"
+                    borderColor="rgba(54, 162, 235, 1)"
+                    backgroundColor="rgba(54, 162, 235, 0.2)"
+                />
+            </div>
+        </div>
     </div>
 </template>
 
@@ -22,6 +42,11 @@
 import StatusCard from '../components/dashborad-cards/StatusCard.vue';
 import BarChartCard from '../components/dashborad-cards/BarChartCard.vue';
 import DoughnutChart from '../components/dashborad-cards/DoughnutChart.vue';
+import LineChart from '../components/dashborad-cards/LineChart.vue';
+
+const cpuUsage = Array.from({ length: 30 }, () => Math.floor(Math.random() * 100))
+const ramUsage = Array.from({ length: 30 }, () => Math.floor(Math.random() * 100))
+
 const services = [
   {
     serviceName: 'Auth Service',
