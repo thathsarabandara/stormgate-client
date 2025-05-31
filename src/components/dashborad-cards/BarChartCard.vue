@@ -1,16 +1,16 @@
 <template>
   <div class="flex flex-col justify-center items-center w-full bg-white rounded-xl">
-    <div class="flex justify-between items-start w-full p-4">
-      <p class="text-2xl text-start font-bold">Total Users</p>
-      <p class="text-gray-500 p-4">Monthly</p>
+    
+    <div class="flex flex-wrap justify-between items-start w-full p-4">
+      <p class="text-xl sm:text-2xl text-start font-bold">Total Users</p>
+      <p class="text-gray-500 p-2 sm:p-4">Monthly</p>
     </div>
 
-    <div class="flex justify-center items-center w-full p-4 space-x-6">
-      <!-- Chart -->
-      <div class="flex justify-center items-center w-2/3 h-[450px]">
+    <div class="flex flex-col md:flex-row justify-center items-center w-full p-4 space-y-6 md:space-y-0 md:space-x-6">
+      <div class="flex justify-center items-center w-full md:w-2/3 h-[300px] sm:h-[450px]">
         <Bar :data="chartData" :options="chartOptions" />
       </div>
-      <div class="flex flex-col space-y-4 w-1/3">
+      <div class="flex flex-col space-y-4 w-full md:w-1/3">
         <div
           v-for="(service, index) in services"
           :key="service"
@@ -20,14 +20,17 @@
             :style="{ backgroundColor: colors[index] }"
             class="w-4 h-4 rounded"
           ></div>
-          <p class="text-gray-700 font-medium">{{ service }} Service: 
+          <p class="text-gray-700 font-medium text-sm sm:text-base">
+            {{ service }} Service: 
             <span class="font-bold text-gray-900">{{ userCounts[index] }}</span>
           </p>
         </div>
       </div>
     </div>
+
   </div>
 </template>
+
 
 <script setup>
 import {

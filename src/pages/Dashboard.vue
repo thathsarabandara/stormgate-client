@@ -1,22 +1,22 @@
 <template>
-    <div class="ml-16 mx-4">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+    <div class="ml-16 mx-4 mt-3">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
             <StatusCard
                 v-for="(service, index) in services"
                 :key="index"
                 v-bind="service"
             />
         </div>
-        <div class="flex w-full mt-4 gap-3">
-            <div class="rounded-xl w-2/3">
+        <div class="flex flex-col lg:flex-row w-full mt-4 gap-3">
+            <div class="rounded-xl lg:w-2/3">
                 <BarChartCard />
             </div>
-            <div class="rounded-xl w-1/3">
+            <div class="rounded-xl lg:w-1/3">
                 <DoughnutChart />
             </div>
         </div>
-        <div class="flex w-full mt-4 gap-3">
-            <div class="rounded-xl w-1/2">
+        <div class="flex flex-col lg:flex-row w-full mt-4 gap-3">
+            <div class="rounded-xl lg:w-1/2">
                 <LineChart
                     chartTitle="Total CPU Usage"
                     label="CPU Usage (%)"
@@ -25,7 +25,7 @@
                     backgroundColor="rgba(255, 99, 132, 0.2)"
                 />
             </div>
-            <div class="rounded-xl w-1/2">
+            <div class="rounded-xl lg:w-1/2 ">
                 <LineChart
                     chartTitle="Total RAM Usage"
                     label="RAM Usage (%)"
@@ -35,7 +35,7 @@
                 />
             </div>
         </div>
-        <div class="flex w-full mt-4">
+        <div class="flex w-full my-4">
             <CustomTable
                 :items="userList"
                 :columns="columnData"
