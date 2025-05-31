@@ -1,9 +1,9 @@
 <template>
   <div class="flex">
     <Sidebar  />
-    <main class="w-full">
+    <main class="min-h-screen w-full">
       <Navbar />
-      <div class="bg-white">
+      <div class="min-h-screen w-full bg-white">
         <router-view />
       </div>
       <Footer />

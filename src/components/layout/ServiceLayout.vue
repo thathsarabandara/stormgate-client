@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col justify-center items-start w-11/12 ml-20 p-4">
-    <p class="text-2xl font-bold mb-4">AuthService</p>
+    <p class="text-2xl font-bold mb-4">{{ serviceName }}</p>
 
     <div class="flex w-full">
       <div class="flex items-center justify-center border-b border-gray-200 pb-4 mb-4 w-1/3">
@@ -28,66 +28,47 @@
     <div class="flex p-4 rounded-xl w-full">
       <Performance 
         v-if="activeTab === 0" 
-            serviceName="Auth Service"
-            :statusCards="statusCards"
-            :monthlyRequests="requests"
-            :cpuUsage="cpuUsage"
-            :ramUsage="ramUsage"
-            :diskUsage="diskUsage"
-            :errorLogs="errorLogs"
-            :columns="columns"
-        />
+        :serviceName="serviceName"
+        :statusCards="statusCards"
+        :monthlyRequests="monthlyRequests"
+        :cpuUsage="cpuUsage"
+        :ramUsage="ramUsage"
+        :diskUsage="diskUsage"
+        :errorLogs="errorLogs"
+        :columns="errorColumns"
+      />
       <Error 
         v-if="activeTab === 1" 
-            serviceName="Auth Service"
-            :errorLogs="errorLogs"
-            :columns="columns"
-        />
-      <Data v-if="activeTab === 2" />
+        :serviceName="serviceName"
+        :errorLogs="errorLogs"
+        :columns="errorColumns"
+      />
+      <Data
+        v-if="activeTab === 2"
+        :tables="tables"
+      />
     </div>
   </div>
 </template>
 
 <script setup>
 import { ref } from 'vue';
+import { Icon } from '@iconify/vue';
 import Performance from '../service-cards/Performance.vue';
 import Error from '../service-cards/Error.vue';
 import Data from '../service-cards/Data.vue';
-import { Icon } from '@iconify/vue';
 
-const requests = Array.from({ length: 30 }, () => Math.floor(Math.random() * 100))
-const cpuUsage = Array.from({ length: 30 }, () => Math.floor(Math.random() * 100))
-const ramUsage = Array.from({ length: 30 }, () => Math.floor(Math.random() * 100))
-const diskUsage = Array.from({ length: 30 }, () => Math.floor(Math.random() * 100))
-
-const errorLogs = ref([
-  { id: 1, timestamp: '2025-05-31 09:24:00', service: 'AuthService', errorType: 'ValidationError', message: 'Invalid email format.' },
-  { id: 2, timestamp: '2025-05-31 09:30:12', service: 'AuthService', errorType: 'DatabaseError', message: 'Failed to connect to MySQL.' },
-  { id: 3, timestamp: '2025-05-31 09:41:55', service: 'AuthService', errorType: 'TokenError', message: 'JWT expired.' },
-  { id: 4, timestamp: '2025-05-31 10:00:00', service: 'AuthService', errorType: 'NetworkError', message: 'Redis connection timeout.' },
-  { id: 5, timestamp: '2025-05-31 10:15:00', service: 'AuthService', errorType: 'UnknownError', message: 'Unhandled exception occurred.' },
-]);
-
-const columns = ref([
-  { key: 'id', label: 'ID' },
-  { key: 'timestamp', label: 'Timestamp' },
-  { key: 'service', label: 'Service' },
-  { key: 'errorType', label: 'Error Type' },
-  { key: 'message', label: 'Message' },
-])
-
-const statusCards = ref([
-  { icon: 'mdi:shield-lock', value: 'UP', label: 'Service Status' },
-  { icon: 'mdi:clock-outline', value: '22h 45m', label: 'Service Uptime' },
-  { icon: 'mdi:speedometer', value: '120ms', label: 'Latency' },
-  { icon: 'mdi:account-group', value: '250', label: 'Users' },
-  { icon: 'mdi:chart-bar', value: '12.5K', label: 'Monthly Requests' },
-  { icon: 'mdi:database-check', value: 'UP', label: 'Database Status' },
-  { icon: 'mdi:timer-sand', value: '85ms', label: 'Database Latency' },
-  { icon: 'mdi:cpu-64-bit', value: '65%', label: 'Avg. CPU Usage' },
-  { icon: 'mdi:memory', value: '70%', label: 'Avg. RAM Usage' },
-  { icon: 'mdi:lan-connect', value: '3.5 MBps', label: 'Avg. Net Usage' }
-])
+const props = defineProps({
+  serviceName: String,
+  statusCards: Array,
+  monthlyRequests: Array,
+  cpuUsage: Array,
+  ramUsage: Array,
+  diskUsage: Array,
+  errorLogs: Array,
+  errorColumns: Array,
+  tables: Array
+});
 
 const tabs = [
   { name: 'Performance', icon: 'mdi:performance' },
