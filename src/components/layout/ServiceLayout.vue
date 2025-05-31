@@ -3,7 +3,7 @@
     <p class="text-2xl font-bold mb-4">{{ serviceName }}</p>
 
     <div class="flex w-full">
-      <div class="flex items-center justify-center border-b border-gray-200 pb-4 mb-4 w-1/3">
+      <div class="flex items-center justify-center border-b border-gray-200 pb-4 mb-4 w-full md:w-1/3">
         <div
           v-for="(tab, index) in tabs"
           :key="index"

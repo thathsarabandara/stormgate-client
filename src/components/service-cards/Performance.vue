@@ -3,7 +3,7 @@
     <p class="text-xl font-bold w-full">
       {{ serviceName }} Performance
     </p>
-    <div class="grid grid-cols-5 gap-3 w-full">
+    <div class="grid grid-cols-2 lg:grid-cols-5 gap-3 w-full">
       <ServiceStatusCard
         v-for="(card, index) in statusCards"
         :key="index"
@@ -23,7 +23,7 @@
         backgroundColor="rgba(255, 99, 132, 0.2)"
       />
     </div>
-    <div class="grid grid-cols-3 gap-4 w-full mt-2">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 w-full mt-2">
       <LineChart
         chartTitle="CPU Usage"
         label="CPU Usage (%)"
