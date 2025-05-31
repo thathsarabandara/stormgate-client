@@ -7,11 +7,13 @@
                 v-bind="service"
             />
         </div>
-        <div class="flex w-full mt-4">
+        <div class="flex w-full mt-4 gap-3">
             <div class="rounded-xl w-2/3">
                 <BarChartCard />
             </div>
-            <div class="rounded-xl w-1/3"></div>
+            <div class="rounded-xl w-1/3">
+                <DoughnutChart />
+            </div>
         </div>
     </div>
 </template>
@@ -19,6 +21,7 @@
 <script setup>
 import StatusCard from '../components/dashborad-cards/StatusCard.vue';
 import BarChartCard from '../components/dashborad-cards/BarChartCard.vue';
+import DoughnutChart from '../components/dashborad-cards/DoughnutChart.vue';
 const services = [
   {
     serviceName: 'Auth Service',
