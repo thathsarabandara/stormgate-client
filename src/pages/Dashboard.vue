@@ -1,16 +1,24 @@
 <template>
-    <div class="grid grid-cols-3 gap-3 ml-16 m-2">
-        <StatusCard
-            v-for="(service, index) in services"
-            :key="index"
-            v-bind="service"
-        />
+    <div class="ml-16 mx-4">
+        <div class="grid grid-cols-3 gap-3">
+            <StatusCard
+                v-for="(service, index) in services"
+                :key="index"
+                v-bind="service"
+            />
+        </div>
+        <div class="flex w-full mt-4">
+            <div class="rounded-xl w-2/3">
+                <BarChartCard />
+            </div>
+            <div class="rounded-xl w-1/3"></div>
+        </div>
     </div>
 </template>
 
 <script setup>
 import StatusCard from '../components/dashborad-cards/StatusCard.vue';
-
+import BarChartCard from '../components/dashborad-cards/BarChartCard.vue';
 const services = [
   {
     serviceName: 'Auth Service',
