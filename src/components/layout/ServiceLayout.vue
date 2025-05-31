@@ -37,7 +37,12 @@
             :errorLogs="errorLogs"
             :columns="columns"
         />
-      <Error v-if="activeTab === 1" />
+      <Error 
+        v-if="activeTab === 1" 
+            serviceName="Auth Service"
+            :errorLogs="errorLogs"
+            :columns="columns"
+        />
       <Data v-if="activeTab === 2" />
     </div>
   </div>

@@ -46,19 +46,6 @@
         backgroundColor="rgba(255, 179, 68, 0.2)"
       />
     </div>
-    <div class="mt-3 w-full">
-      <CustomTable
-        :name="`${serviceName} Error Log`"
-        :items="errorLogs"
-        :columns="columns"
-        :showActions="false"
-        :allowEdit="false"
-        :allowDelete="false"
-        :itemsPerPage="5"
-        @edit="editItem"
-        @delete="deleteItem"
-      />
-    </div>
   </div>
 </template>
 
@@ -74,8 +61,6 @@ defineProps({
   cpuUsage: Array,
   ramUsage: Array,
   diskUsage: Array,
-  errorLogs: Array,
-  columns: Array
 });
 
 const emit = defineEmits(['edit', 'delete'])
