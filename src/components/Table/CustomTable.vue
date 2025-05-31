@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col justify-center items-start w-full bg-white p-4 rounded-xl">
 
-    <p class="text-xl sm:text-2xl font-bold">Common Error Log</p>
+    <p class="text-xl sm:text-2xl font-bold">{{ name }}</p>
     
     <div class="mb-4 flex flex-col sm:flex-row gap-2 w-full mt-4">
       <input
@@ -124,6 +124,7 @@ import { usePagination } from '../../composables/usePagination'
 import { Icon } from '@iconify/vue'
 
 const props = defineProps({
+  name: String,
   items: Array,
   columns: Array,
   showActions: {

@@ -37,6 +37,7 @@
         </div>
         <div class="flex w-full my-4">
             <CustomTable
+                 name="Common Error Log"
                 :items="userList"
                 :columns="columnData"
                 :showActions="false"
