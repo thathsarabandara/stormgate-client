@@ -13,9 +13,16 @@ import ForgotPassword from './pages/auth/ForgotPassword.vue'
 import ForgotPasswordOTP from './pages/auth/ForgotPasswordOTP.vue'
 import OTPVerify from './pages/auth/OTPVerify.vue'
 import ResetPassowrd from './pages/auth/ResetPassword.vue'
+import Home from './pages/home/Home.vue'
+import LandingLayout from './components/layout/LandingLayout.vue'
 
 const routes = [
-  { path: '/', redirect: '/dashboard' },
+  { path: '/',
+    component: LandingLayout,
+    children: [
+      { path: '', component: Home },
+    ],
+   },
 
   {
     path: '/auth',
@@ -29,21 +36,16 @@ const routes = [
     ],
   },
   {
-    path: '/',
+    path: '/service',
     component: MainLayout,  
     children: [
       { path: 'dashboard', component: Dashboard },
-      {
-        path: 'service',
-        children: [
-          { path: 'auth-service', component: AuthService },
-          { path: 'profile-service', component: ProfileService },
-          { path: 'notification-service', component: NotificationService },
-          { path: 'cart-service', component: CartService },
-          { path: 'order-service', component: OrderService },
-          { path: 'payment-service', component: PaymentService },
-        ],
-      },
+      { path: 'auth-service', component: AuthService },
+      { path: 'profile-service', component: ProfileService },
+      { path: 'notification-service', component: NotificationService },
+      { path: 'cart-service', component: CartService },
+      { path: 'order-service', component: OrderService },
+      { path: 'payment-service', component: PaymentService },
     ],
   },
 ]

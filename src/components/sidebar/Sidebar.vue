@@ -43,7 +43,7 @@ const open = ref(false)
 const route = useRoute()
 
 const navLinks = [
-  { label: 'Dashboard', icon: 'mdi:view-dashboard', path: '/dashboard' },
+  { label: 'Dashboard', icon: 'mdi:view-dashboard', path: '/service/dashboard' },
   { label: 'Auth Service', icon: 'mdi:shield-account', path: '/service/auth-service' },
   { label: 'Profile Service', icon: 'mdi:account-cog', path: '/service/profile-service' },
   { label: 'Notification Service', icon: 'mdi:bell', path: '/service/notification-service' },
