@@ -32,7 +32,7 @@
       </form>
 
       <div class="mt-6 text-center">
-        <RouterLink to="/teacher/auth/login" class="text-green-500 hover:underline text-sm">
+        <RouterLink to="/auth/login" class="text-green-500 hover:underline text-sm">
           Back to Login
         </RouterLink>
       </div>
