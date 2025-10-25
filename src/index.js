@@ -16,6 +16,7 @@ import ResetPassowrd from './pages/auth/ResetPassword.vue'
 import Home from './pages/home/Home.vue'
 import LandingLayout from './components/layout/LandingLayout.vue'
 import Services from './pages/home/services.vue'
+import Pricing from './pages/home/pricing.vue'
 
 const routes = [
   { path: '/',
@@ -23,6 +24,7 @@ const routes = [
     children: [
       { path: '', component: Home },
       { path: 'services', component: Services },
+      { path: 'pricing', component: Pricing },
     ],
    },
 
