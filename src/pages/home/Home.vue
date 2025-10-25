@@ -205,6 +205,70 @@
             </div>
         </div>
     </div>
+    <!-- Newsletter Section -->
+    <div class="bg-gradient-to-r from-green-500 via-emerald-500 to-green-600 w-full py-20 px-6 relative overflow-hidden">
+        <!-- Background Animation Elements -->
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute top-0 left-0 w-96 h-96 bg-white rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse" style="animation-duration: 4s;"></div>
+            <div class="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-pulse" style="animation-duration: 5s; animation-delay: 1s;"></div>
+        </div>
+
+        <div class="max-w-2xl mx-auto text-center relative z-10">
+            <!-- Header -->
+            <div class="animate-in fade-in slide-in-from-top-8 duration-800 mb-8">
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">Stay Updated</h2>
+                <p class="text-lg text-white/90">Get the latest news and updates about Stormgate delivered to your inbox.</p>
+            </div>
+
+            <!-- Newsletter Form -->
+            <div class="animate-in fade-in slide-in-from-bottom-8 duration-800 delay-200">
+                <form @submit.prevent="subscribeNewsletter" class="flex flex-col sm:flex-row gap-3 mb-6">
+                    <input 
+                        v-model="email" 
+                        type="email" 
+                        placeholder="Enter your email address" 
+                        class="flex-1 px-6 py-4 rounded-lg bg-white/95 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-green-700 transition-all duration-300 hover:bg-white"
+                        required
+                    >
+                    <button 
+                        type="submit"
+                        class="group relative px-8 py-4 bg-white text-green-600 font-bold rounded-lg hover:bg-gray-100 transition-all duration-300 hover:shadow-2xl hover:shadow-green-700/50 hover:scale-105 active:scale-95 overflow-hidden"
+                    >
+                        <span class="relative z-10">Subscribe</span>
+                        <div class="absolute inset-0 bg-gradient-to-r from-gray-100 to-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </button>
+                </form>
+
+                <!-- Success Message -->
+                <transition name="fade">
+                    <div v-if="subscribeSuccess" class="animate-in fade-in slide-in-from-bottom-4 duration-500 bg-white/20 border border-white/40 rounded-lg px-6 py-3 text-white font-semibold backdrop-blur-sm">
+                        ✓ Thank you for subscribing! Check your email for confirmation.
+                    </div>
+                </transition>
+
+                <!-- Privacy Note -->
+                <p class="text-white/80 text-sm mt-6">
+                    We respect your privacy. Unsubscribe at any time.
+                </p>
+            </div>
+
+            <!-- Stats -->
+            <div class="grid grid-cols-3 gap-6 mt-12 pt-8 border-t border-white/20">
+                <div class="animate-in fade-in zoom-in duration-800 delay-300">
+                    <div class="text-3xl font-bold text-white">50K+</div>
+                    <div class="text-white/80 text-sm">Subscribers</div>
+                </div>
+                <div class="animate-in fade-in zoom-in duration-800 delay-400">
+                    <div class="text-3xl font-bold text-white">Weekly</div>
+                    <div class="text-white/80 text-sm">Updates</div>
+                </div>
+                <div class="animate-in fade-in zoom-in duration-800 delay-500">
+                    <div class="text-3xl font-bold text-white">100%</div>
+                    <div class="text-white/80 text-sm">Spam-free</div>
+                </div>
+            </div>
+        </div>
+    </div>
    
 </template>
 
@@ -215,6 +279,8 @@ const activeUsers = ref(0)
 const microservices = ref(0)
 const uptime = ref(0)
 const projectsDeployed = ref(0)
+const email = ref('')
+const subscribeSuccess = ref(false)
 
 const animateCounter = (target, duration = 2000) => {
   return new Promise((resolve) => {
@@ -232,6 +298,16 @@ const animateCounter = (target, duration = 2000) => {
       return current
     }, 16)
   })
+}
+
+const subscribeNewsletter = () => {
+  if (email.value) {
+    subscribeSuccess.value = true
+    email.value = ''
+    setTimeout(() => {
+      subscribeSuccess.value = false
+    }, 5000)
+  }
 }
 
 onMounted(() => {
@@ -306,5 +382,15 @@ onMounted(() => {
     transform: translateX(200%);
     opacity: 0;
   }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>

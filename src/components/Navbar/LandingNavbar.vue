@@ -84,8 +84,8 @@ const isMenuOpen = ref(false)
 
 const navLinks = [
   { label: 'Home', path: '/' },
-  { label: 'Products', path: '/products' },
   { label: 'Services', path: '/services' },
+  { label: 'Pricing', path: '/pricing' },
   { label: 'About', path: '/about' },
   { label: 'Contact', path: '/contact' },
 ]
