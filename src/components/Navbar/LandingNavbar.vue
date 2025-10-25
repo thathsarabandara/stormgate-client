@@ -2,9 +2,11 @@
     <nav class="bg-white shadow-md w-7/12 mx-auto rounded-2xl">
         <div class="flex justify-between items-center px-4 py-3 md:px-6 gap-4">
             <!-- Logo -->
-            <div class="flex-shrink-0">
-                <img src="../../assets/Banner.png" alt="Banner" class="h-10 w-auto">
-            </div>
+            <a href="/">
+                <div class="flex-shrink-0">
+                    <img src="../../assets/Banner.png" alt="Banner" class="h-10 w-auto">
+                </div>
+            </a>
 
             <!-- Desktop Navigation Links -->
             <div class="hidden md:flex items-center gap-1">
@@ -20,8 +22,8 @@
 
             <!-- Desktop Auth Buttons -->
             <div class="hidden md:flex items-center gap-3">
-                <a href="" class="px-4 py-2 text-sm font-semibold text-green-500 hover:text-green-600 transition-colors">Login</a>
-                <a href="" class="px-4 py-2 text-sm font-semibold text-white bg-green-500 hover:bg-green-600 rounded-lg transition-colors">Register</a>
+                <a href="/auth/login" class="px-4 py-2 text-sm font-semibold text-green-500 hover:text-green-600 transition-colors">Login</a>
+                <a href="/auth/register" class="px-4 py-2 text-sm font-semibold text-white bg-green-500 hover:bg-green-600 rounded-lg transition-colors">Register</a>
             </div>
 
             <!-- Mobile Hamburger Menu Button -->
@@ -58,7 +60,7 @@
             >
             <div class="px-2 pt-2 pb-3 space-y-1">
                 <RouterLink
-                    v-for="links in navLinks"
+                    v-for="links in navLinks"   
                     :key="links.path"
                     :to="links.path"
                     class="block px-3 py-2 rounded-md text-base font-medium text-black hover:text-green-500 hover:bg-gray-100 transition-colors"
@@ -68,8 +70,8 @@
                 </RouterLink>
             </div>
             <div class="px-2 py-3 border-t border-gray-200 space-y-2">
-                <a href="" class="block px-3 py-2 rounded-md text-base font-medium text-green-500 hover:bg-gray-100 transition-colors">Login</a>
-                <a href="" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-green-500 hover:bg-green-600 transition-colors text-center">Register</a>
+                <a href="auth/login" class="block px-3 py-2 rounded-md text-base font-medium text-green-500 hover:bg-gray-100 transition-colors">Login</a>
+                <a href="auth/register" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-green-500 hover:bg-green-600 transition-colors text-center">Register</a>
             </div>
         </div>
     </nav>
@@ -87,6 +89,6 @@ const navLinks = [
   { label: 'Services', path: '/services' },
   { label: 'Pricing', path: '/pricing' },
   { label: 'About', path: '/about' },
-  { label: 'Contact', path: '/contact' },
+  { label: 'FAQ', path: '/faq' },
 ]
 </script>
