@@ -18,6 +18,7 @@ import LandingLayout from './components/layout/LandingLayout.vue'
 import Services from './pages/home/services.vue'
 import Pricing from './pages/home/pricing.vue'
 import About from './pages/home/About.vue'
+import FAQ from './pages/home/FAQ.vue'
 
 const routes = [
   { path: '/',
@@ -27,6 +28,7 @@ const routes = [
       { path: 'services', component: Services },
       { path: 'pricing', component: Pricing },
       { path: 'about', component: About },
+      { path: 'faq', component: FAQ },
     ],
    },
 
