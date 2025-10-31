@@ -1,5 +1,5 @@
 <template>
-    <div class="ml-16 mx-4 mt-3">
+    <div class="mx-4 mt-3">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
             <StatusCard
                 v-for="(service, index) in services"
