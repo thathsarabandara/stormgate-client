@@ -1,11 +1,11 @@
 <template>
-  <div class="flex flex-col justify-center items-start p-4 w-full bg-white rounded-xl shadow-xl">
-    <div class="flex justify-between items-center w-full mb-4">
-      <p class="text-xl font-bold">{{ chartTitle }}</p>
-      <p class="text-gray-500">Last 30 Days</p>
+  <div class="flex flex-col justify-center items-start p-3 sm:p-4 w-full bg-white rounded-xl shadow-xl h-full">
+    <div class="flex flex-col xs:flex-row justify-between items-start xs:items-center w-full mb-3 sm:mb-4 space-y-1 xs:space-y-0">
+      <p class="text-lg sm:text-xl font-bold">{{ chartTitle }}</p>
+      <p class="text-sm sm:text-base text-gray-500">Last 30 Days</p>
     </div>
-    <div class="w-full">
-      <Line :data="chartData" :options="chartOptions" class="w-full" />
+    <div class="w-full h-[250px] sm:h-[300px] md:h-[350px]">
+      <Line :data="chartData" :options="chartOptions" class="w-full h-full" />
     </div>
   </div>
 </template>
@@ -81,28 +81,92 @@ const chartData = computed(() => ({
 
 const chartOptions = {
   responsive: true,
+  maintainAspectRatio: false,
   plugins: {
     legend: {
-      position: 'top'
+      position: 'top',
+      labels: {
+        boxWidth: 12,
+        padding: 10,
+        font: {
+          size: 11,
+          family: 'Inter, system-ui, sans-serif'
+        }
+      }
     },
-    title: {
-      display: false
+    tooltip: {
+      enabled: true,
+      mode: 'index',
+      intersect: false,
+      titleFont: {
+        size: 12
+      },
+      bodyFont: {
+        size: 12
+      },
+      padding: 8
     }
   },
   scales: {
     y: {
       title: {
         display: true,
-        text: 'Usage (%)'
+        text: 'Usage (%)',
+        font: {
+          size: 11
+        }
       },
-      beginAtZero: true
+      beginAtZero: true,
+      grid: {
+        drawBorder: false
+      },
+      ticks: {
+        font: {
+          size: 10
+        },
+        maxTicksLimit: 6
+      }
     },
     x: {
       title: {
         display: true,
-        text: 'Date'
+        text: 'Date',
+        font: {
+          size: 11
+        }
+      },
+      grid: {
+        display: false
+      },
+      ticks: {
+        font: {
+          size: 10
+        },
+        maxRotation: 45,
+        minRotation: 45,
+        maxTicksLimit: 7
       }
     }
+  },
+  elements: {
+    line: {
+      tension: 0.4,
+      borderWidth: 2,
+      borderColor: props.borderColor,
+      backgroundColor: 'transparent'
+    },
+    point: {
+      radius: 3,
+      hoverRadius: 5,
+      backgroundColor: 'white',
+      borderWidth: 2,
+      borderColor: props.borderColor
+    }
+  },
+  interaction: {
+    mode: 'nearest',
+    axis: 'x',
+    intersect: false
   }
 }
 </script>
