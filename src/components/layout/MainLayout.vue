@@ -1,13 +1,13 @@
 <template>
-  <div class="flex">
-    <Sidebar  />
-    <main class="min-h-screen w-full">
+  <div class="flex flex-col md:flex-row min-h-screen">
+    <Sidebar class="fixed z-10" />
+    <div class="ml-6 lg:ml-12 w-full">
       <Navbar />
-      <div class="min-h-screen w-full bg-white">
+      <main class="bg-white p-2 sm:p-4">
         <router-view />
-      </div>
+      </main>
       <Footer />
-    </main>
+    </div>
   </div>
 </template>
 
