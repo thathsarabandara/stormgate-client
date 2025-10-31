@@ -22,52 +22,53 @@
             <div class="absolute top-1/2 left-1/3 w-40 h-0.5 bg-gradient-to-r from-green-400 to-transparent opacity-30" style="animation: slideAcross 8s ease-in-out infinite;"></div>
         </div>
 
-        <div class="flex w-10/12 gap-16 items-center relative z-10">
+        <div class="flex flex-col lg:flex-row w-11/12 md:w-10/12 gap-8 lg:gap-16 items-center relative z-10">
             <!-- Left Content Section -->
-            <div class="w-1/2 space-y-6">
+            <div class="w-full lg:w-1/2 space-y-4 md:space-y-6 text-center lg:text-left">
                 <div class="inline-block px-3 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded-full animate-in fade-in duration-800 delay-100">
                     ✨ Microservices Platform
                 </div>
                 
-                <h1 class="text-6xl font-bold leading-tight text-gray-900 animate-in fade-in slide-in-from-left-8 duration-800">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-gray-900 animate-in fade-in slide-in-from-left-8 duration-800">
                     Manage your Business with 
-                    <span class="text-green-500 animate-pulse" style="animation-duration: 2.5s;">Stormgate</span>
+                    <span class="text-green-500 animate-pulse block sm:inline" style="animation-duration: 2.5s;">Stormgate</span>
                 </h1>
                 
-                <p class="text-lg text-gray-600 leading-relaxed animate-in fade-in slide-in-from-bottom-4 duration-800 delay-100">
+                <p class="text-base sm:text-lg text-gray-600 leading-relaxed animate-in fade-in slide-in-from-bottom-4 duration-800 delay-100 max-w-2xl mx-auto lg:mx-0">
                     Deploy, scale, and manage microservices with ease. Stormgate is your all-in-one solution for modern business operations.
                 </p>
 
-                <div class="flex gap-4 pt-4 animate-in fade-in slide-in-from-bottom-4 duration-800 delay-200">
-                    <button class="group relative px-8 py-3 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-xl hover:shadow-green-500/30 hover:scale-110 active:scale-95 overflow-hidden">
+                <div class="flex flex-col sm:flex-row gap-4 pt-4 animate-in fade-in slide-in-from-bottom-4 duration-800 delay-200 justify-center lg:justify-start">
+                    <button class="group relative px-6 sm:px-8 py-2.5 sm:py-3 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-xl hover:shadow-green-500/30 hover:scale-105 active:scale-95 overflow-hidden text-sm sm:text-base">
                         <span class="relative z-10">Get Started</span>
                         <div class="absolute inset-0 bg-gradient-to-r from-green-600 to-emerald-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     </button>
-                    <button class="px-8 py-3 border-2 border-green-500 text-green-600 hover:bg-green-50 font-semibold rounded-lg transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-green-500/20">
+                    <button class="px-6 sm:px-8 py-2.5 sm:py-3 border-2 border-green-500 text-green-600 hover:bg-green-50 font-semibold rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-green-500/20 text-sm sm:text-base">
                         Learn More
                     </button>
                 </div>
             </div>
 
             <!-- Right Image Section -->
-            <div class="w-1/2 flex justify-center animate-in fade-in slide-in-from-right-8 duration-800">
-                <div class="relative">
+            <div class="w-full lg:w-2/3 flex justify-center animate-in fade-in slide-in-from-right-8 duration-800 mt-8 lg:mt-0">
+                <div class="relative w-full max-w-xl lg:max-w-none">
                     <div class="absolute inset-0 bg-gradient-to-r from-green-400 to-green-600 rounded-2xl blur-2xl opacity-20 animate-pulse"></div>
                     <img 
                         src="../../assets/home/landing.png" 
                         alt="Banner"
-                        class="relative w-full h-auto rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 hover:scale-105 transform"
+                        class="relative w-full h-auto rounded-6xl transition-shadow duration-300 hover:scale-105 transform"
+                        loading="lazy"
                     >
                 </div>
             </div>
         </div>
     </div>
      <!-- Stats Section -->
-     <div class="bg-white w-full py-16 px-6">
+     <div class="bg-white w-full py-12 sm:py-16 px-4 sm:px-6">
         <div class="max-w-6xl mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
                 <!-- Active Users Stat -->
-                <div class="flex flex-col items-center p-6 rounded-lg bg-gradient-to-br from-green-50 to-green-100 hover:shadow-lg hover:scale-105 transition-transform animate-in fade-in zoom-in slide-in-from-bottom-8 duration-1000">
+                <div class="flex flex-col items-center p-4 sm:p-6 rounded-lg bg-gradient-to-br from-green-50 to-green-100 hover:shadow-lg hover:scale-105 transition-transform animate-in fade-in zoom-in slide-in-from-bottom-8 duration-1000">
                     <div class="text-4xl font-bold text-green-600 mb-2 animate-in fade-in duration-1000 delay-200">{{ activeUsers }}K+</div>
                     <div class="text-gray-600 font-semibold text-center animate-in fade-in duration-1000 delay-300">Active Users</div>
                     <div class="text-sm text-gray-500 mt-2 text-center animate-in fade-in duration-1000 delay-400">Growing daily</div>
@@ -97,12 +98,12 @@
         </div>
     </div>
     <!-- Customers Section -->
-    <div class="bg-gradient-to-r from-gray-50 to-white w-full py-16 px-6">
+    <div class="bg-gradient-to-r from-gray-50 to-white w-full py-12 sm:py-16 px-4 sm:px-6">
         <div class="max-w-6xl mx-auto">
             <!-- Section Header -->
-            <div class="text-center mb-12 animate-in fade-in slide-in-from-top-4 duration-800">
-                <h2 class="text-4xl font-bold text-gray-800 mb-3">Trusted by Leading Companies</h2>
-                <p class="text-lg text-gray-600">Join thousands of businesses using Stormgate</p>
+            <div class="text-center mb-8 sm:mb-12 animate-in fade-in slide-in-from-top-4 duration-800">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-2 sm:mb-3">Trusted by Leading Companies</h2>
+                <p class="text-base sm:text-lg text-gray-600">Join thousands of businesses using Stormgate</p>
             </div>
 
             <!-- Customers Grid -->
