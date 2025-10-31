@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-wrap justify-between items-center p-2 px-4 bg-white shadow-md w-full">
-    <div class="flex items-center">
+    <div class="ml-5 -mr-10 flex items-center">
       <p class="font-extrabold text-base sm:text-lg md:text-xl whitespace-nowrap">
         Stormgate Microservices
       </p>
