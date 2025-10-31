@@ -1,9 +1,9 @@
 <template>
-  <div class="flex flex-col justify-center items-center w-full">
+  <div class="flex flex-col justify-center items-center w-11/12 lg:w-full">
     <p class="text-xl font-bold w-full">
       {{ serviceName }} Performance
     </p>
-    <div class="grid grid-cols-2 lg:grid-cols-5 gap-3 w-full">
+    <div class="grid grid-cols-1 lg:grid-cols-5 gap-3 w-full">
       <ServiceStatusCard
         v-for="(card, index) in statusCards"
         :key="index"
