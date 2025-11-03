@@ -99,7 +99,7 @@
     <!-- Metrics Section -->
     <div class="bg-white w-full py-12 sm:py-16 px-4 sm:px-6">
         <div class="max-w-6xl mx-auto">
-            <div class="flex flex-col lg:flex-row items-start gap-8 lg:gap-12">
+            <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
                 <!-- Left Column - Text Content -->
                 <div class="w-full lg:w-1/2 space-y-6">
                     <h2 class="text-3xl sm:text-4xl font-bold text-gray-800">Real-time Service Metrics</h2>
@@ -145,6 +145,118 @@
                         >
                         
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Database Error Logs Section -->
+    <div class="bg-gray-50 w-full py-12 sm:py-16 px-4 sm:px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col lg:flex-row-reverse items-center gap-8 lg:gap-12">
+                <!-- Right Column - Text Content -->
+                <div class="w-full lg:w-1/2 space-y-6">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-gray-800">Database Error Logging</h2>
+                    <p class="text-gray-600 text-lg leading-relaxed">
+                        Track and resolve database issues with detailed error logging. Monitor row-level errors and failed transactions in real-time.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-red-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                            </svg>
+                            <span class="text-gray-700">Real-time monitoring of database errors and failed transactions</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-red-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                            </svg>
+                            <span class="text-gray-700">Detailed row-level error information and stack traces</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-red-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                            </svg>
+                            <span class="text-gray-700">Visual query builder to filter and search error logs</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-red-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                            </svg>
+                            <span class="text-gray-700">Proactive alerts for critical database issues</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Left Column - Image -->
+                <div class="w-full lg:w-1/2">
+                    <div class="relative ">
+                        <img 
+                            src="../../assets/home/service_details.png" 
+                            alt="Database Error Logs Dashboard" 
+                            class="w-full h-auto transition-transform duration-500 hover:scale-105"
+                            loading="lazy"
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Key Features Section -->
+    <div class="bg-white w-full py-16 sm:py-20 px-4 sm:px-6">
+        <div class="max-w-6xl mx-auto">
+            <!-- Section Header -->
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Powerful Features for Your Business</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Discover how our platform can transform your business operations with these powerful features</p>
+            </div>
+
+            <!-- Features Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-blue-50 rounded-lg flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Lightning Fast</h3>
+                    <p class="text-gray-600">Experience blazing fast performance with our optimized microservices architecture.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-green-50 rounded-lg flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Enterprise Security</h3>
+                    <p class="text-gray-600">Bank-grade security with end-to-end encryption and compliance certifications.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-purple-50 rounded-lg flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-purple-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Easy Integration</h3>
+                    <p class="text-gray-600">Seamlessly connect with your existing tools and workflows using our APIs.</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-amber-50 rounded-lg flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">24/7 Support</h3>
+                    <p class="text-gray-600">Round-the-clock technical support from our team of experts.</p>
                 </div>
             </div>
         </div>
@@ -204,6 +316,72 @@
                 </div>
             </div>
     </div>
+    
+    <!-- Blog Section -->
+    <div class="bg-white w-full py-16 sm:py-20 px-4 sm:px-6">
+        <div class="max-w-6xl mx-auto">
+            <!-- Section Header -->
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Latest From Our Blog</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Insights, tips, and updates to help you get the most out of our platform</p>
+            </div>
+
+            <!-- Blog Carousel -->
+            <div class="relative">
+                <!-- Navigation Buttons -->
+                <button 
+                    @click="scrollCarousel('left')"
+                    class="absolute left-0 top-1/2 -translate-y-1/2 -ml-4 sm:-ml-6 z-10 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-gray-700 hover:bg-gray-50 transition-colors"
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                
+                <div class="overflow-hidden">
+                    <div 
+                        ref="carousel"
+                        class="flex space-x-6 pb-8 transition-transform duration-300 ease-out"
+                        :style="{ transform: `translateX(${carouselOffset}px)` }"
+                    >
+                        <BlogPostCard
+                            v-for="(post, index) in blogPosts"
+                            :key="index"
+                            :image="post.image"
+                            :alt-text="post.altText"
+                            :category="post.category"
+                            :date="post.date"
+                            :title="post.title"
+                            :excerpt="post.excerpt"
+                            :url="post.url"
+                            :tag-variant="post.tagVariant"
+                            class="flex-shrink-0 w-full sm:w-1/2 lg:w-1/3"
+                        />
+                    </div>
+                </div>
+
+                <button 
+                    @click="scrollCarousel('right')"
+                    class="absolute right-0 top-1/2 -translate-y-1/2 -mr-4 sm:-mr-6 z-10 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-gray-700 hover:bg-gray-50 transition-colors"
+                >
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- View All Button -->
+            <div class="text-center mt-10">
+                <a href="#" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700 transition-colors">
+                    View All Articles
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+    
     <!-- Newsletter Section -->
     <div class="bg-gradient-to-r from-green-500 via-emerald-500 to-green-600 w-full py-20 px-6 relative overflow-hidden">
         <!-- Background Animation Elements -->
@@ -273,6 +451,70 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
+import BlogPostCard from '../../components/Blog/BlogPostCard.vue'
+
+// Carousel functionality
+const carousel = ref(null);
+const carouselOffset = ref(0);
+const cardWidth = 384; // Width of each card + gap (384px = 1/3 of max-w-6xl + gap)
+
+const scrollCarousel = (direction) => {
+  const container = carousel.value;
+  if (!container) return;
+  
+  const containerWidth = container.offsetWidth;
+  const maxOffset = container.scrollWidth - containerWidth;
+  
+  if (direction === 'left') {
+    carouselOffset.value = Math.min(0, carouselOffset.value + cardWidth);
+  } else {
+    carouselOffset.value = Math.max(-maxOffset, carouselOffset.value - cardWidth);
+  }
+};
+
+// Blog posts data
+const blogPosts = [
+  {
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+    altText: 'Microservices Architecture',
+    category: 'Architecture',
+    date: 'October 28, 2025',
+    title: 'Scaling Microservices: Best Practices',
+    excerpt: 'Learn how to effectively scale your microservices architecture for optimal performance and reliability.',
+    url: '#',
+    tagVariant: 'green'
+  },
+  {
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+    altText: 'Database Optimization',
+    category: 'Database',
+    date: 'October 21, 2025',
+    title: 'Optimizing Database Performance',
+    excerpt: 'Discover advanced techniques to improve your database performance and reduce query times.',
+    url: '#',
+    tagVariant: 'blue'
+  },
+  {
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+    altText: 'DevOps Practices',
+    category: 'DevOps',
+    date: 'October 14, 2025',
+    title: 'Modern DevOps Best Practices',
+    excerpt: 'Implement these DevOps strategies to streamline your development and deployment processes.',
+    url: '#',
+    tagVariant: 'purple'
+  },
+  {
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80',
+    altText: 'Cloud Security',
+    category: 'Security',
+    date: 'October 7, 2025',
+    title: 'Cloud Security in 2025',
+    excerpt: 'Stay ahead with the latest cloud security trends and best practices for your business.',
+    url: '#',
+    tagVariant: 'red'
+  }
+];
 
 // Customer data
 const customers = ref([
