@@ -52,12 +52,11 @@
             <!-- Right Image Section -->
             <div class="w-full lg:w-2/3 flex justify-center animate-in fade-in slide-in-from-right-8 duration-800 mt-8 lg:mt-0">
                 <div class="relative w-full max-w-xl lg:max-w-none">
-                    <div class="absolute inset-0 bg-gradient-to-r from-green-400 to-green-600 rounded-2xl blur-2xl opacity-20 animate-pulse"></div>
+                    <div class="absolute inset-0 bg-gradient-to-r from-green-400 to-green-600 rounded-full blur-3xl opacity-20 animate-pulse"></div>
                     <img 
                         src="../../assets/home/landing.png" 
                         alt="Banner"
-                        class="relative w-full h-auto rounded-6xl transition-shadow duration-300 hover:scale-105 transform"
-                        loading="lazy"
+                        class="relative w-full h-auto rounded-6xl transition-shadow hover:scale-105 transform duration-700"                        loading="lazy"
                     >
                 </div>
             </div>
@@ -97,114 +96,113 @@
             </div>
         </div>
     </div>
-    <!-- Customers Section -->
-    <div class="bg-gradient-to-r from-gray-50 to-white w-full py-12 sm:py-16 px-4 sm:px-6">
+    <!-- Metrics Section -->
+    <div class="bg-white w-full py-12 sm:py-16 px-4 sm:px-6">
         <div class="max-w-6xl mx-auto">
-            <!-- Section Header -->
-            <div class="text-center mb-8 sm:mb-12 animate-in fade-in slide-in-from-top-4 duration-800">
-                <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-2 sm:mb-3">Trusted by Leading Companies</h2>
-                <p class="text-base sm:text-lg text-gray-600">Join thousands of businesses using Stormgate</p>
-            </div>
-
-            <!-- Customers Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Customer 1 -->
-                <div class="flex flex-col items-center p-8 bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow animate-in fade-in slide-in-from-left-8 duration-1000">
-                    <div class="w-24 h-24 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full flex items-center justify-center mb-4 text-white text-3xl font-bold">
-                        <img src="../../assets/home/customers/ementor.png" alt="E-Mentor">
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">E-Mentor</h3>
-                    <p class="text-gray-600 text-center text-sm mb-4">Leading Learning Management Platform</p>
-                    <div class="flex gap-1">
-                        <span class="text-yellow-400">★</span>
-                        <span class="text-yellow-400">★</span>
-                        <span class="text-yellow-400">★</span>
-                        <span class="text-yellow-400">★</span>
-                        <span class="text-yellow-400">★</span>
-                    </div>
+            <div class="flex flex-col lg:flex-row items-start gap-8 lg:gap-12">
+                <!-- Left Column - Text Content -->
+                <div class="w-full lg:w-1/2 space-y-6">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-gray-800">Real-time Service Metrics</h2>
+                    <p class="text-gray-600 text-lg leading-relaxed">
+                        Monitor your microservices with comprehensive, real-time metrics. Track uptime, response times, and system health at a glance.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-green-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span class="text-gray-700">Real-time uptime monitoring with 99.9% accuracy</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-green-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span class="text-gray-700">Detailed latency metrics and response time analysis</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-green-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span class="text-gray-700">Customizable dashboards for your team's needs</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-6 w-6 text-green-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <span class="text-gray-700">Instant alerts for any service disruptions</span>
+                        </li>
+                    </ul>
                 </div>
-
-                <!-- Customer 2 -->
-                <div class="flex flex-col items-center p-8 bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow animate-in fade-in zoom-in duration-1000 delay-100">
-                    <div class="w-24 h-24 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center mb-4 text-white text-3xl font-bold">
-                        <img src="../../assets/home/customers/healthsphere.png" alt="Health Sphere">
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Health Sphere</h3>
-                    <p class="text-gray-600 text-center text-sm mb-4">Leading Healthcare solutions</p>
-                    <div class="flex gap-1">
-                        <span class="text-yellow-400">★</span>
-                        <span class="text-yellow-400">★</span>
-                        <span class="text-yellow-400">★</span>
-                        <span class="text-yellow-400">★</span>
-                        <span class="text-yellow-400">★</span>
-                    </div>
-                </div>
-
-                <!-- Customer 3 -->
-                <div class="flex flex-col items-center p-8 bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow animate-in fade-in slide-in-from-right-8 duration-1000 delay-200">
-                    <div class="w-24 h-24 bg-gradient-to-br from-purple-400 to-purple-600 rounded-full flex items-center justify-center mb-4 text-white text-3xl font-bold">
-                        <img src="../../assets/home/customers/bigcart.png" alt="Big Cart">
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Big Cart</h3>
-                    <p class="text-gray-600 text-center text-sm mb-4">Leading E-commerce platform</p>
-                    <div class="flex gap-1">
-                        <span class="text-yellow-400">★</span>
-                        <span class="text-yellow-400">★</span>
-                        <span class="text-yellow-400">★</span>
-                        <span class="text-yellow-400">★</span>
-                        <span class="text-yellow-400">★</span>
-                    </div>
-                </div>
-
-                <!-- Customer 4 -->
-                <div class="flex flex-col items-center p-8 bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow animate-in fade-in slide-in-from-left-8 duration-1000 delay-300">
-                    <div class="w-24 h-24 bg-gradient-to-br from-orange-400 to-orange-600 rounded-full flex items-center justify-center mb-4 text-white text-3xl font-bold">
-                        <img src="../../assets/home/customers/chefza.png" alt="Chefza">
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Chefza</h3>
-                    <p class="text-gray-600 text-center text-sm mb-4">Leading restaurant management platform</p>
-                    <div class="flex gap-1">
-                        <span class="text-yellow-400">★</span>
-                        <span class="text-yellow-400">★</span>
-                        <span class="text-yellow-400">★</span>
-                        <span class="text-yellow-400">★</span>
-                        <span class="text-yellow-400">★</span>
-                    </div>
-                </div>
-
-                <!-- Customer 5 -->
-                <div class="flex flex-col items-center p-8 bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow animate-in fade-in zoom-in duration-1000 delay-400">
-                    <div class="w-24 h-24 bg-gradient-to-br from-red-400 to-red-600 rounded-full flex items-center justify-center mb-4 text-white text-3xl font-bold">
-                        <img src="../../assets/home/customers/sixteenclothing.png" alt="Sixteen Clothing">
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Sixteen Clothing</h3>
-                    <p class="text-gray-600 text-center text-sm mb-4">Leading fashion e-commerce platform</p>
-                    <div class="flex gap-1">
-                        <span class="text-yellow-400">★</span>
-                        <span class="text-yellow-400">★</span>
-                        <span class="text-yellow-400">★</span>
-                        <span class="text-yellow-400">★</span>
-                        <span class="text-yellow-400">★</span>
-                    </div>
-                </div>
-
-                <!-- Customer 6 -->
-                <div class="flex flex-col items-center p-8 bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow animate-in fade-in slide-in-from-right-8 duration-1000 delay-500">
-                    <div class="w-24 h-24 bg-gradient-to-br from-indigo-400 to-indigo-600 rounded-full flex items-center justify-center mb-4 text-white text-3xl font-bold">
-                        <img src="../../assets/home/customers/stromgate.png" alt="StormGate">
-                    </div>
-                    <h3 class="text-xl font-semibold text-gray-800 mb-2">StormGate</h3>
-                    <p class="text-gray-600 text-center text-sm mb-4">Leading microservices platform</p>
-                    <div class="flex gap-1">
-                        <span class="text-yellow-400">★</span>
-                        <span class="text-yellow-400">★</span>
-                        <span class="text-yellow-400">★</span>
-                        <span class="text-yellow-400">★</span>
-                        <span class="text-yellow-400">★</span>
+                
+                <!-- Right Column - Image -->
+                <div class="w-full lg:w-1/2">
+                    <div class="relative rounded-xl">
+                        <img 
+                            src="../../assets/home/metrics.png" 
+                            alt="Service Metrics Dashboard" 
+                            class="w-full h-auto transition-transform duration-500 hover:scale-105"
+                            loading="lazy"
+                        >
+                        
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+    <!-- Customers Section -->
+    <div class="bg-gradient-to-r from-gray-50 to-white w-full pt-12 sm:py-16 px-4 sm:px-6">
+        <div class="flex flex-col items-center justify-start mx-auto -mb-18">
+            <!-- Section Header -->
+            <div class="text-center animate-in fade-in slide-in-from-top-4 duration-800">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-2 sm:mb-3">Trusted by Leading Companies</h2>
+                <p class="text-base sm:text-lg text-gray-600">Join thousands of businesses using Stormgate</p>
+            </div>
+
+            <!-- Map Image -->
+            <div class="flex justify-center items-center max-w-6xl rounded-xl overflow-hidden  animate-in fade-in duration-1000">
+                <img src="../../assets/home/map.png" alt="Customer Locations Map" class="w-full h-auto">
+            </div>
+        </div>
+            <!-- Customers Carousel -->
+            <div class="relative overflow-hidden">
+                <div class="relative h-[500px] overflow-hidden">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="absolute inset-0 bg-gradient-to-r from-white via-transparent to-white z-10 pointer-events-none"></div>
+                        <div class="relative w-full h-full flex items-center">
+                            <!-- First Row (Moving Left) -->
+                            <div class="flex space-x-8 animate-marquee whitespace-nowrap">
+                                <div v-for="(customer, index) in customers" :key="'first-' + index" class="flex-shrink-0 w-80">
+                                    <div class="flex flex-col items-center p-8 bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow">
+                                        <div class="w-24 h-24 rounded-full flex items-center justify-center mb-4 overflow-hidden">
+                                            <img :src="customer.logo" :alt="customer.name" class="w-20 h-20 object-contain">
+                                        </div>
+                                        <h3 class="text-xl font-semibold text-gray-800 mb-2">{{ customer.name }}</h3>
+                                        <p class="text-gray-600 text-center text-sm mb-4">{{ customer.description }}</p>
+                                        <div class="flex gap-1">
+                                            <span v-for="i in 5" :key="i" class="text-yellow-400">★</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Duplicate for seamless loop -->
+                            <div class="flex space-x-8 animate-marquee2 whitespace-nowrap absolute left-full">
+                                <div v-for="(customer, index) in customers" :key="'second-' + index" class="flex-shrink-0 w-80">
+                                    <div class="flex flex-col items-center p-8 bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow">
+                                        <div class="w-24 h-24 rounded-full flex items-center justify-center mb-4 overflow-hidden">
+                                            <img :src="customer.logo" :alt="customer.name" class="w-20 h-20 object-contain">
+                                        </div>
+                                        <h3 class="text-xl font-semibold text-gray-800 mb-2">{{ customer.name }}</h3>
+                                        <p class="text-gray-600 text-center text-sm mb-4">{{ customer.description }}</p>
+                                        <div class="flex gap-1">
+                                            <span v-for="i in 5" :key="i" class="text-yellow-400">★</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
     </div>
     <!-- Newsletter Section -->
     <div class="bg-gradient-to-r from-green-500 via-emerald-500 to-green-600 w-full py-20 px-6 relative overflow-hidden">
@@ -275,6 +273,40 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
+
+// Customer data
+const customers = ref([
+  {
+    name: 'E-Mentor',
+    description: 'Leading Learning Management Platform',
+    logo: new URL('../../assets/home/customers/ementor.png', import.meta.url).href
+  },
+  {
+    name: 'Health Sphere',
+    description: 'Leading Healthcare solutions',
+    logo: new URL('../../assets/home/customers/healthsphere.png', import.meta.url).href
+  },
+  {
+    name: 'Big Cart',
+    description: 'Leading E-commerce platform',
+    logo: new URL('../../assets/home/customers/bigcart.png', import.meta.url).href
+  },
+  {
+    name: 'Chefza',
+    description: 'Leading restaurant management platform',
+    logo: new URL('../../assets/home/customers/chefza.png', import.meta.url).href
+  },
+  {
+    name: 'Sixteen Clothing',
+    description: 'Leading fashion e-commerce platform',
+    logo: new URL('../../assets/home/customers/sixteenclothing.png', import.meta.url).href
+  },
+  {
+    name: 'StormGate',
+    description: 'Leading microservices platform',
+    logo: new URL('../../assets/home/customers/stromgate.png', import.meta.url).href
+  }
+])
 
 const activeUsers = ref(0)
 const microservices = ref(0)
@@ -362,6 +394,52 @@ onMounted(() => {
 </script>
 
 <style scoped>
+/* Marquee Animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes marquee2 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+  animation-play-state: running;
+}
+
+.animate-marquee2 {
+  animation: marquee 30s linear infinite 15s;
+  animation-play-state: running;
+}
+
+/* Pause animation on hover */
+.relative:hover .animate-marquee,
+.relative:hover .animate-marquee2 {
+  animation-play-state: paused;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .animate-marquee,
+  .animate-marquee2 {
+    animation-duration: 40s;
+  }
+  
+  .animate-marquee2 {
+    animation-delay: 20s;
+  }
+}
 @keyframes float {
   0%, 100% {
     transform: translateY(0px);
