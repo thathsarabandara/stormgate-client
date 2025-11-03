@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-gradient-to-br from-white via-green-50 to-emerald-50 w-full min-h-screen flex justify-center items-center pt-20 relative overflow-hidden">
+  <div ref="heroSection" class="bg-gradient-to-br from-white via-green-50 to-emerald-50 w-full min-h-screen flex justify-center items-center pt-20 relative overflow-hidden opacity-0">
         <!-- Animated Background Shapes -->
         <div class="absolute inset-0 pointer-events-none">
             <!-- Glowing Blob 1 -->
@@ -25,20 +25,20 @@
         <div class="flex flex-col lg:flex-row w-11/12 md:w-10/12 gap-8 lg:gap-16 items-center relative z-10">
             <!-- Left Content Section -->
             <div class="w-full lg:w-1/2 space-y-4 md:space-y-6 text-center lg:text-left">
-                <div class="inline-block px-3 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded-full animate-in fade-in duration-800 delay-100">
+                <div class="scroll-animation inline-block px-3 py-1 bg-green-100 text-green-700 text-xs font-semibold rounded-full" style="transition-delay: 100ms">
                     ✨ Microservices Platform
                 </div>
                 
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-gray-900 animate-in fade-in slide-in-from-left-8 duration-800">
+                <h1 class="scroll-animation text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-gray-900" style="transition-delay: 200ms">
                     Manage your Business with 
                     <span class="text-green-500 animate-pulse block sm:inline" style="animation-duration: 2.5s;">Stormgate</span>
                 </h1>
                 
-                <p class="text-base sm:text-lg text-gray-600 leading-relaxed animate-in fade-in slide-in-from-bottom-4 duration-800 delay-100 max-w-2xl mx-auto lg:mx-0">
+                <p class="scroll-animation text-base sm:text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto lg:mx-0" style="transition-delay: 300ms">
                     Deploy, scale, and manage microservices with ease. Stormgate is your all-in-one solution for modern business operations.
                 </p>
 
-                <div class="flex flex-col sm:flex-row gap-4 pt-4 animate-in fade-in slide-in-from-bottom-4 duration-800 delay-200 justify-center lg:justify-start">
+                <div class="scroll-animation flex flex-col sm:flex-row gap-4 pt-4 justify-center lg:justify-start" style="transition-delay: 400ms">
                     <button class="group relative px-6 sm:px-8 py-2.5 sm:py-3 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-lg transition-all duration-300 hover:shadow-xl hover:shadow-green-500/30 hover:scale-105 active:scale-95 overflow-hidden text-sm sm:text-base">
                         <span class="relative z-10">Get Started</span>
                         <div class="absolute inset-0 bg-gradient-to-r from-green-600 to-emerald-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -50,7 +50,7 @@
             </div>
 
             <!-- Right Image Section -->
-            <div class="w-full lg:w-2/3 flex justify-center animate-in fade-in slide-in-from-right-8 duration-800 mt-8 lg:mt-0">
+            <div class="scroll-animation w-full lg:w-2/3 flex justify-center mt-8 lg:mt-0" style="transition-delay: 200ms">
                 <div class="relative w-full max-w-xl lg:max-w-none">
                     <div class="absolute inset-0 bg-gradient-to-r from-green-400 to-green-600 rounded-full blur-3xl opacity-20 animate-pulse"></div>
                     <img 
@@ -63,7 +63,7 @@
         </div>
     </div>
      <!-- Stats Section -->
-     <div class="bg-white w-full py-12 sm:py-16 px-4 sm:px-6">
+     <div ref="statsSection" class="bg-white w-full py-12 sm:py-16 px-4 sm:px-6 opacity-0">
         <div class="max-w-6xl mx-auto">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
                 <!-- Active Users Stat -->
@@ -97,7 +97,7 @@
         </div>
     </div>
     <!-- Metrics Section -->
-    <div class="bg-white w-full py-12 sm:py-16 px-4 sm:px-6">
+    <div ref="metricsSection" class="bg-white w-full py-12 sm:py-16 px-4 sm:px-6 opacity-0">
         <div class="max-w-6xl mx-auto">
             <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
                 <!-- Left Column - Text Content -->
@@ -151,7 +151,7 @@
     </div>
     
     <!-- Database Error Logs Section -->
-    <div class="bg-gray-50 w-full py-12 sm:py-16 px-4 sm:px-6">
+    <div ref="dbErrorSection" class="bg-gray-50 w-full py-12 sm:py-16 px-4 sm:px-6 opacity-0">
         <div class="max-w-6xl mx-auto">
             <div class="flex flex-col lg:flex-row-reverse items-center gap-8 lg:gap-12">
                 <!-- Right Column - Text Content -->
@@ -204,8 +204,50 @@
         </div>
     </div>
     
+    <!-- How It Works Section -->
+    <div ref="howItWorksSection" class="bg-gradient-to-b from-gray-50 to-white w-full py-16 sm:py-20 px-4 sm:px-6 opacity-0">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">How It Works</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Get started in minutes with our simple three-step process</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+                <!-- Connection Lines (hidden on mobile) -->
+                <div class="hidden md:block absolute top-16 left-0 right-0 h-0.5 bg-gradient-to-r from-green-200 via-green-400 to-green-200 opacity-30" style="width: 66%; margin: 0 auto;"></div>
+                
+                <!-- Step 1 -->
+                <div class="relative flex flex-col items-center text-center">
+                    <div class="w-20 h-20 rounded-full bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center mb-6 shadow-lg relative z-10">
+                        <span class="text-3xl font-bold text-white">1</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Sign Up</h3>
+                    <p class="text-gray-600">Create your account in seconds. No credit card required to get started.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative flex flex-col items-center text-center">
+                    <div class="w-20 h-20 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center mb-6 shadow-lg relative z-10">
+                        <span class="text-3xl font-bold text-white">2</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Configure</h3>
+                    <p class="text-gray-600">Set up your microservices with our intuitive dashboard and configuration tools.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative flex flex-col items-center text-center">
+                    <div class="w-20 h-20 rounded-full bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center mb-6 shadow-lg relative z-10">
+                        <span class="text-3xl font-bold text-white">3</span>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Deploy</h3>
+                    <p class="text-gray-600">Launch your services with one click and scale effortlessly as you grow.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Key Features Section -->
-    <div class="bg-white w-full py-16 sm:py-20 px-4 sm:px-6">
+    <div ref="featuresSection" class="bg-white w-full py-16 sm:py-20 px-4 sm:px-6 opacity-0">
         <div class="max-w-6xl mx-auto">
             <!-- Section Header -->
             <div class="text-center mb-12">
@@ -262,7 +304,7 @@
         </div>
     </div>
     <!-- Customers Section -->
-    <div class="bg-gradient-to-r from-gray-50 to-white w-full pt-12 sm:py-16 px-4 sm:px-6">
+    <div ref="customersSection" class="bg-gradient-to-r from-gray-50 to-white w-full pt-12 sm:py-16 px-4 sm:px-6 opacity-0">
         <div class="flex flex-col items-center justify-start mx-auto -mb-18">
             <!-- Section Header -->
             <div class="text-center animate-in fade-in slide-in-from-top-4 duration-800">
@@ -316,9 +358,131 @@
                 </div>
             </div>
     </div>
+
+    <!-- Testimonials Section -->
+    <div ref="testimonialsSection" class="bg-white w-full py-16 sm:py-20 px-4 sm:px-6 opacity-0">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Don't just take our word for it - hear from businesses that trust Stormgate</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic">"Stormgate transformed how we manage our microservices. The deployment process is seamless and the monitoring tools are top-notch."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center text-white font-bold mr-3">
+                            SJ
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-900">Sarah Johnson</p>
+                            <p class="text-sm text-gray-600">CTO, TechCorp</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic">"The best investment we made this year. Our deployment time decreased by 70% and our team is more productive than ever."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center text-white font-bold mr-3">
+                            MC
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-900">Michael Chen</p>
+                            <p class="text-sm text-gray-600">Lead Developer, StartupHub</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-gray-100">
+                    <div class="flex items-center mb-4">
+                        <div class="flex text-yellow-400">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-6 italic">"Outstanding platform with excellent support. Stormgate made scaling our infrastructure effortless and cost-effective."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center text-white font-bold mr-3">
+                            EP
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-900">Emily Parker</p>
+                            <p class="text-sm text-gray-600">VP Engineering, CloudScale</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Integration Partners Section -->
+    <div ref="integrationsSection" class="bg-gray-50 w-full py-16 sm:py-20 px-4 sm:px-6 opacity-0">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Seamless Integrations</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Connect with the tools you already use and love</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                <!-- Integration logos -->
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 flex items-center justify-center group hover:-translate-y-1">
+                    <div class="text-4xl grayscale group-hover:grayscale-0 transition-all">🐳</div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 flex items-center justify-center group hover:-translate-y-1">
+                    <div class="text-4xl grayscale group-hover:grayscale-0 transition-all">☸️</div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 flex items-center justify-center group hover:-translate-y-1">
+                    <div class="text-4xl grayscale group-hover:grayscale-0 transition-all">🔧</div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 flex items-center justify-center group hover:-translate-y-1">
+                    <div class="text-4xl grayscale group-hover:grayscale-0 transition-all">📊</div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 flex items-center justify-center group hover:-translate-y-1">
+                    <div class="text-4xl grayscale group-hover:grayscale-0 transition-all">🔐</div>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 flex items-center justify-center group hover:-translate-y-1">
+                    <div class="text-4xl grayscale group-hover:grayscale-0 transition-all">☁️</div>
+                </div>
+            </div>
+
+            <div class="text-center mt-10">
+                <a href="#" class="text-green-600 hover:text-green-700 font-semibold inline-flex items-center group">
+                    View all integrations
+                    <svg class="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
     
     <!-- Blog Section -->
-    <div class="bg-white w-full py-16 sm:py-20 px-4 sm:px-6">
+    <div ref="blogSection" class="bg-white w-full py-16 sm:py-20 px-4 sm:px-6 opacity-0">
         <div class="max-w-6xl mx-auto">
             <!-- Section Header -->
             <div class="text-center mb-12">
@@ -450,8 +614,536 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, onBeforeUnmount, nextTick } from 'vue'
+import gsap from 'gsap'
 import BlogPostCard from '../../components/Blog/BlogPostCard.vue'
+
+// Scroll animation setup
+const animatedElements = ref([])
+const observer = ref(null)
+
+// Initialize Intersection Observer
+const initObserver = () => {
+  observer.value = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate-fadeInUp')
+        observer.value.unobserve(entry.target)
+      }
+    })
+  }, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  })
+
+  // Observe all elements with the 'scroll-animation' class
+  document.querySelectorAll('.scroll-animation').forEach(el => {
+    observer.value.observe(el)
+  })
+}
+
+const heroSection = ref(null)
+const statsSection = ref(null)
+const metricsSection = ref(null)
+const howItWorksSection = ref(null)
+const featuresSection = ref(null)
+const customersSection = ref(null)
+const testimonialsSection = ref(null)
+const integrationsSection = ref(null)
+const blogSection = ref(null)
+const dbErrorSection = ref(null)
+
+// Hero Section Animation
+const animateHeroSection = () => {
+  if (!heroSection.value) return
+  
+  const tl = gsap.timeline({ defaults: { ease: 'power3.out' } })
+  
+  // Fade in the entire section
+  tl.to(heroSection.value, {
+    opacity: 1,
+    duration: 0.3
+  })
+  
+  // Animate badge
+  tl.fromTo(
+    heroSection.value.querySelector('.scroll-animation:first-of-type'),
+    { y: -20, opacity: 0 },
+    { y: 0, opacity: 1, duration: 0.5, ease: 'back.out(1.5)' }
+  )
+  
+  // Animate heading
+  tl.fromTo(
+    heroSection.value.querySelector('h1'),
+    { y: 30, opacity: 0 },
+    { y: 0, opacity: 1, duration: 0.7, ease: 'power2.out' },
+    '-=0.3'
+  )
+  
+  // Animate paragraph
+  tl.fromTo(
+    heroSection.value.querySelector('p'),
+    { y: 20, opacity: 0 },
+    { y: 0, opacity: 1, duration: 0.6 },
+    '-=0.4'
+  )
+  
+  // Animate buttons
+  tl.fromTo(
+    heroSection.value.querySelectorAll('button'),
+    { y: 20, opacity: 0 },
+    { y: 0, opacity: 1, stagger: 0.15, duration: 0.5 },
+    '-=0.3'
+  )
+  
+  // Animate hero image
+  tl.fromTo(
+    heroSection.value.querySelector('img'),
+    { scale: 0.9, opacity: 0, y: 30 },
+    { scale: 1, opacity: 1, y: 0, duration: 1, ease: 'elastic.out(1, 0.6)' },
+    '-=0.6'
+  )
+}
+
+// Stats Section Animation
+const animateStatsSection = () => {
+  if (!statsSection.value) return
+  
+  const tl = gsap.timeline({ defaults: { ease: 'power3.out' } })
+  
+  tl.to(statsSection.value, {
+    opacity: 1,
+    duration: 0.5
+  })
+  
+  // Animate stat cards with stagger
+  const statCards = statsSection.value.querySelectorAll('.grid > div')
+  tl.fromTo(
+    statCards,
+    { y: 50, opacity: 0, scale: 0.9 },
+    {
+      y: 0,
+      opacity: 1,
+      scale: 1,
+      stagger: 0.1,
+      duration: 0.7,
+      ease: 'back.out(1.5)'
+    },
+    '-=0.3'
+  )
+  
+  // Animate numbers with counter effect
+  statCards.forEach((card, index) => {
+    const number = card.querySelector('.text-4xl')
+    if (number) {
+      const finalText = number.textContent
+      const numValue = parseInt(finalText)
+      
+      gsap.fromTo(number,
+        { textContent: 0 },
+        {
+          textContent: numValue,
+          duration: 1.5,
+          delay: index * 0.1,
+          snap: { textContent: 1 },
+          onUpdate: function() {
+            number.textContent = Math.floor(this.targets()[0].textContent) + finalText.replace(/[0-9]/g, '')
+          }
+        }
+      )
+    }
+  })
+}
+
+// Features Section Animation
+const animateFeaturesSection = () => {
+  if (!featuresSection.value) return
+  
+  const tl = gsap.timeline({ defaults: { ease: 'power3.out' } })
+  
+  tl.to(featuresSection.value, {
+    opacity: 1,
+    duration: 0.5
+  })
+  
+  // Animate section header
+  tl.fromTo(
+    featuresSection.value.querySelectorAll('.text-center > *'),
+    { y: 30, opacity: 0 },
+    {
+      y: 0,
+      opacity: 1,
+      stagger: 0.15,
+      duration: 0.6
+    },
+    '-=0.3'
+  )
+  
+  // Animate feature cards
+  const featureCards = featuresSection.value.querySelectorAll('.grid > div')
+  tl.fromTo(
+    featureCards,
+    { y: 40, opacity: 0, rotateY: -15 },
+    {
+      y: 0,
+      opacity: 1,
+      rotateY: 0,
+      stagger: 0.12,
+      duration: 0.8,
+      ease: 'back.out(1.3)'
+    },
+    '-=0.4'
+  )
+  
+  // Animate icons with bounce
+  const icons = featuresSection.value.querySelectorAll('.grid > div > div:first-child')
+  tl.fromTo(
+    icons,
+    { scale: 0, rotation: -180 },
+    {
+      scale: 1,
+      rotation: 0,
+      stagger: 0.12,
+      duration: 0.6,
+      ease: 'elastic.out(1, 0.5)'
+    },
+    '-=0.8'
+  )
+}
+
+// How It Works Section Animation
+const animateHowItWorksSection = () => {
+  if (!howItWorksSection.value) return
+  
+  const tl = gsap.timeline({ defaults: { ease: 'power3.out' } })
+  
+  tl.to(howItWorksSection.value, {
+    opacity: 1,
+    duration: 0.5
+  })
+  
+  // Animate header
+  tl.fromTo(
+    howItWorksSection.value.querySelectorAll('.text-center > *'),
+    { y: 30, opacity: 0 },
+    { y: 0, opacity: 1, stagger: 0.15, duration: 0.6 },
+    '-=0.3'
+  )
+  
+  // Animate connection line
+  tl.fromTo(
+    howItWorksSection.value.querySelector('.absolute.h-0\\.5'),
+    { scaleX: 0, opacity: 0 },
+    { scaleX: 1, opacity: 0.3, duration: 0.8 },
+    '-=0.3'
+  )
+  
+  // Animate step circles and content
+  const steps = howItWorksSection.value.querySelectorAll('.grid > div')
+  tl.fromTo(
+    steps,
+    { y: 40, opacity: 0, scale: 0.8 },
+    { y: 0, opacity: 1, scale: 1, stagger: 0.2, duration: 0.7, ease: 'back.out(1.5)' },
+    '-=0.6'
+  )
+}
+
+// Customers Section Animation
+const animateCustomersSection = () => {
+  if (!customersSection.value) return
+  
+  const tl = gsap.timeline({ defaults: { ease: 'power3.out' } })
+  
+  tl.to(customersSection.value, {
+    opacity: 1,
+    duration: 0.5
+  })
+  
+  // Animate header
+  tl.fromTo(
+    customersSection.value.querySelectorAll('.text-center > *'),
+    { y: 30, opacity: 0 },
+    {
+      y: 0,
+      opacity: 1,
+      stagger: 0.15,
+      duration: 0.6
+    },
+    '-=0.3'
+  )
+  
+  // Animate map image
+  tl.fromTo(
+    customersSection.value.querySelector('img'),
+    { scale: 0.95, opacity: 0, y: 20 },
+    {
+      scale: 1,
+      opacity: 1,
+      y: 0,
+      duration: 0.8
+    },
+    '-=0.4'
+  )
+}
+
+// Testimonials Section Animation
+const animateTestimonialsSection = () => {
+  if (!testimonialsSection.value) return
+  
+  const tl = gsap.timeline({ defaults: { ease: 'power3.out' } })
+  
+  tl.to(testimonialsSection.value, {
+    opacity: 1,
+    duration: 0.5
+  })
+  
+  // Animate header
+  tl.fromTo(
+    testimonialsSection.value.querySelectorAll('.text-center > *'),
+    { y: 30, opacity: 0 },
+    { y: 0, opacity: 1, stagger: 0.15, duration: 0.6 },
+    '-=0.3'
+  )
+  
+  // Animate testimonial cards
+  const cards = testimonialsSection.value.querySelectorAll('.grid > div')
+  tl.fromTo(
+    cards,
+    { y: 50, opacity: 0, rotateX: -10 },
+    { y: 0, opacity: 1, rotateX: 0, stagger: 0.15, duration: 0.8, ease: 'back.out(1.2)' },
+    '-=0.4'
+  )
+}
+
+// Integrations Section Animation
+const animateIntegrationsSection = () => {
+  if (!integrationsSection.value) return
+  
+  const tl = gsap.timeline({ defaults: { ease: 'power3.out' } })
+  
+  tl.to(integrationsSection.value, {
+    opacity: 1,
+    duration: 0.5
+  })
+  
+  // Animate header
+  tl.fromTo(
+    integrationsSection.value.querySelectorAll('.text-center > *'),
+    { y: 30, opacity: 0 },
+    { y: 0, opacity: 1, stagger: 0.15, duration: 0.6 },
+    '-=0.3'
+  )
+  
+  // Animate integration icons
+  const icons = integrationsSection.value.querySelectorAll('.grid > div')
+  tl.fromTo(
+    icons,
+    { scale: 0, rotation: 180, opacity: 0 },
+    { scale: 1, rotation: 0, opacity: 1, stagger: 0.08, duration: 0.6, ease: 'back.out(1.7)' },
+    '-=0.4'
+  )
+}
+
+// Blog Section Animation
+const animateBlogSection = () => {
+  if (!blogSection.value) return
+  
+  const tl = gsap.timeline({ defaults: { ease: 'power3.out' } })
+  
+  tl.to(blogSection.value, {
+    opacity: 1,
+    duration: 0.5
+  })
+  
+  // Animate header
+  tl.fromTo(
+    blogSection.value.querySelectorAll('.text-center > *'),
+    { y: 30, opacity: 0 },
+    { y: 0, opacity: 1, stagger: 0.15, duration: 0.6 },
+    '-=0.3'
+  )
+  
+  // Animate blog cards
+  const cards = blogSection.value.querySelectorAll('[class*="flex-shrink-0"]')
+  if (cards.length > 0) {
+    tl.fromTo(
+      cards,
+      { x: 50, opacity: 0 },
+      { x: 0, opacity: 1, stagger: 0.15, duration: 0.7 },
+      '-=0.4'
+    )
+  }
+}
+
+const animateMetricsSection = () => {
+  if (!metricsSection.value) return
+  
+  const tl = gsap.timeline({ defaults: { ease: 'power3.out' } })
+  
+  // Fade in the section
+  tl.to(metricsSection.value, {
+    opacity: 1,
+    duration: 0.5
+  })
+  
+  // Animate text content
+  tl.fromTo(
+    metricsSection.value.querySelectorAll('h2, p, li'),
+    { y: 20, opacity: 0 },
+    {
+      y: 0,
+      opacity: 1,
+      stagger: 0.08,
+      duration: 0.6,
+      ease: 'back.out(1.2)'
+    },
+    '-=0.3'
+  )
+  
+  // Animate image with a subtle bounce
+  tl.fromTo(
+    metricsSection.value.querySelector('img'),
+    { scale: 0.95, opacity: 0, y: 20 },
+    {
+      scale: 1,
+      opacity: 1,
+      y: 0,
+      duration: 0.8,
+      ease: 'elastic.out(1, 0.5)'
+    },
+    '-=0.5'
+  )
+}
+
+const animateDbErrorSection = () => {
+  if (!dbErrorSection.value) return
+  
+  const tl = gsap.timeline({ defaults: { ease: 'power3.out' } })
+  
+  // Fade in the section
+  tl.to(dbErrorSection.value, {
+    opacity: 1,
+    duration: 0.5
+  })
+  
+  // Animate text content
+  tl.fromTo(
+    dbErrorSection.value.querySelectorAll('h2, p, li'),
+    { y: 30, opacity: 0 },
+    {
+      y: 0,
+      opacity: 1,
+      stagger: 0.1,
+      duration: 0.6,
+      ease: 'back.out(1.2)'
+    },
+    '-=0.3'
+  )
+  
+  // Animate image
+  tl.fromTo(
+    dbErrorSection.value.querySelector('img'),
+    { scale: 0.9, opacity: 0 },
+    {
+      scale: 1,
+      opacity: 1,
+      duration: 0.8,
+      ease: 'elastic.out(1, 0.5)'
+    },
+    '-=0.5'
+  )
+}
+
+onMounted(() => {
+  initObserver()
+  // Re-run observer setup when route changes (for SPA navigation)
+  window.addEventListener('popstate', initObserver)
+  
+  // Animate database error section when it comes into view
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateDbErrorSection()
+        observer.unobserve(entry.target)
+      }
+    })
+  }, { threshold: 0.1 })
+  
+  // Observe both sections for animation
+  const observerOptions = { threshold: 0.1 }
+  
+  const errorObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateDbErrorSection()
+        errorObserver.unobserve(entry.target)
+      }
+    })
+  }, observerOptions)
+  
+  const metricsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        animateMetricsSection()
+        metricsObserver.unobserve(entry.target)
+      }
+    })
+  }, observerOptions)
+  
+  // Create observers for all sections
+  const createSectionObserver = (sectionRef, animationFunc) => {
+    return new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animationFunc()
+          entry.target.observer?.unobserve(entry.target)
+        }
+      })
+    }, observerOptions)
+  }
+  
+  const heroObserver = createSectionObserver(heroSection, animateHeroSection)
+  const statsObserver = createSectionObserver(statsSection, animateStatsSection)
+  const howItWorksObserver = createSectionObserver(howItWorksSection, animateHowItWorksSection)
+  const featuresObserver = createSectionObserver(featuresSection, animateFeaturesSection)
+  const customersObserver = createSectionObserver(customersSection, animateCustomersSection)
+  const testimonialsObserver = createSectionObserver(testimonialsSection, animateTestimonialsSection)
+  const integrationsObserver = createSectionObserver(integrationsSection, animateIntegrationsSection)
+  const blogObserver = createSectionObserver(blogSection, animateBlogSection)
+  
+  nextTick(() => {
+    // Animate hero immediately on mount
+    if (heroSection.value) {
+      animateHeroSection()
+    }
+    
+    // Observe all sections
+    const sections = [
+      { ref: statsSection, observer: statsObserver },
+      { ref: metricsSection, observer: metricsObserver },
+      { ref: howItWorksSection, observer: howItWorksObserver },
+      { ref: featuresSection, observer: featuresObserver },
+      { ref: customersSection, observer: customersObserver },
+      { ref: testimonialsSection, observer: testimonialsObserver },
+      { ref: integrationsSection, observer: integrationsObserver },
+      { ref: blogSection, observer: blogObserver },
+      { ref: dbErrorSection, observer: errorObserver }
+    ]
+    
+    sections.forEach(({ ref, observer }) => {
+      if (ref.value) {
+        observer.observe(ref.value)
+      }
+    })
+  })
+})
+
+onBeforeUnmount(() => {
+  if (observer.value) {
+    observer.value.disconnect()
+  }
+  window.removeEventListener('popstate', initObserver)
+})
 
 // Carousel functionality
 const carousel = ref(null);
@@ -636,6 +1328,32 @@ onMounted(() => {
 </script>
 
 <style scoped>
+/* Scroll animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.scroll-animation {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scroll-animation.animate-fadeInUp {
+  opacity: 1;
+  transform: translateY(0);
+}
 /* Marquee Animation */
 @keyframes marquee {
   0% {
