@@ -29,20 +29,21 @@ const routes = [
       { path: 'pricing', component: Pricing },
       { path: 'about', component: About },
       { path: 'faq', component: FAQ },
+      {
+        path: '/auth',
+        children: [
+          { path: 'login', component: Login },
+          { path: 'register', component: Register },
+          { path: 'forgot-password', component: ForgotPassword },
+          { path: 'forgot-password-otp', component: ForgotPasswordOTP },
+          { path: 'reset-password', component: ResetPassowrd },
+          { path: 'otp-verify', component: OTPVerify }
+        ],
+     },
     ],
    },
 
-  {
-    path: '/auth',
-    children: [
-      { path: 'login', component: Login },
-      { path: 'register', component: Register },
-      { path: 'forgot-password', component: ForgotPassword },
-      { path: 'forgot-password-otp', component: ForgotPasswordOTP },
-      { path: 'reset-password', component: ResetPassowrd },
-      { path: 'otp-verify', component: OTPVerify }
-    ],
-  },
+  
   {
     path: '/service',
     component: MainLayout,  

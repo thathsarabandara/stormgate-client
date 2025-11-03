@@ -1,9 +1,12 @@
 <template>
     <div class="w-full">
         <!-- Mini Hero Section with Background Image -->
-        <div class="w-full h-96 relative overflow-hidden bg-cover bg-center" style="background-image: url('../../assets/home/landing.png');">
+        <div ref="heroSection" class="w-full h-96 relative overflow-hidden bg-cover bg-center opacity-0" style="background-image: url('../../assets/home/landing.png');">
             <!-- Dark Overlay -->
-            <div class="absolute inset-0 bg-black/40"></div>
+            <div class="absolute inset-0 bg-black/40">
+                <div class="absolute inset-0 bg-black/40"></div>
+                <img src="../../assets/about/about.png" alt="Banner" class="w-full h-full object-cover " loading="lazy">
+            </div>
 
             <div class="max-w-6xl mx-auto relative z-10 h-full flex flex-col justify-center px-6">
                 <!-- Breadcrumbs -->
@@ -28,7 +31,7 @@
         </div>
     </div>
     <!-- About Content Section -->
-    <div class="bg-white w-full py-20 px-6">
+    <div ref="storySection" class="bg-white w-full py-20 px-6 opacity-0">
         <div class="max-w-6xl mx-auto">
             <!-- Company Story Section -->
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
@@ -64,21 +67,13 @@
                 </div>
 
                 <!-- Right Image Placeholder -->
-                <div class="relative animate-in fade-in slide-in-from-right-8 duration-800 delay-100">
-                    <div class="aspect-video bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl flex items-center justify-center border-2 border-dashed border-gray-300">
-                        <div class="text-center text-gray-500">
-                            <svg class="w-16 h-16 mx-auto mb-4 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                            </svg>
-                            <p class="font-semibold">Company Image</p>
-                            <p class="text-sm">Team collaboration or office space</p>
-                        </div>
-                    </div>
+                <div class="relative animate-in fade-in slide-in-from-right-8 duration-800 delay-100 rounded-2xl">
+                    <img src="../../assets/about/office.png" alt="Banner" class="w-full h-full object-cover rounded-2xl animate-in fade-in slide-in-from-right-8 duration-800 delay-100" loading="lazy"></img>
                 </div>
             </div>
 
             <!-- Team Section -->
-            <div class="mb-20">
+            <div ref="teamSection" class="mb-20 opacity-0">
                 <div class="text-center mb-16 animate-in fade-in slide-in-from-top-4 duration-800">
                     <h2 class="text-4xl font-bold text-gray-900 mb-4">Meet Our Team</h2>
                     <p class="text-lg text-gray-600 max-w-2xl mx-auto">
@@ -89,13 +84,9 @@
                 <!-- Team Grid -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <!-- Team Member 1 -->
-                    <div class="text-center animate-in fade-in zoom-in duration-800">
-                        <div class="aspect-square bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center border-4 border-white shadow-lg mb-4 mx-auto" style="width: 150px; height: 150px;">
-                            <div class="text-blue-600">
-                                <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
-                                </svg>
-                            </div>
+                    <div class="text-center animate-in fade-in zoom-in duration-800 hover:scale-105 transition-all">
+                        <div class="aspect-square bg-gradient-to-br from-blue-100 to-blue-200 rounded-full flex items-center justify-center border-4 border-white shadow-lg mb-4 mx-auto hover:border-green-500 hover:shadow-green-500 hover:shadow-lg hover:z-10" style="width: 150px; height: 150px;">
+                            <img src="../../assets/about/team/member1.png" alt="Banner" class="w-full h-full object-cover rounded-full animate-in fade-in slide-in-from-right-8 duration-800 delay-100" loading="lazy"></img>
                         </div>
                         <h3 class="text-xl font-bold text-gray-900 mb-2">Sarah Chen</h3>
                         <p class="text-green-600 font-semibold mb-1">CEO & Co-Founder</p>
@@ -103,13 +94,9 @@
                     </div>
 
                     <!-- Team Member 2 -->
-                    <div class="text-center animate-in fade-in zoom-in duration-800 delay-100">
-                        <div class="aspect-square bg-gradient-to-br from-green-100 to-green-200 rounded-full flex items-center justify-center border-4 border-white shadow-lg mb-4 mx-auto" style="width: 150px; height: 150px;">
-                            <div class="text-green-600">
-                                <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
-                                </svg>
-                            </div>
+                    <div class="text-center animate-in fade-in zoom-in duration-800 delay-100 hover:scale-105 transition-all">
+                        <div class="aspect-square bg-gradient-to-br from-green-100 to-green-200 rounded-full flex items-center justify-center border-4 border-white shadow-lg mb-4 mx-auto hover:border-green-500 hover:shadow-green-500 hover:shadow-lg hover:z-10" style="width: 150px; height: 150px;">
+                            <img src="../../assets/about/team/member3.png" alt="Banner" class="w-full h-full object-cover rounded-full animate-in fade-in slide-in-from-right-8 duration-800 delay-100" loading="lazy"></img>
                         </div>
                         <h3 class="text-xl font-bold text-gray-900 mb-2">Marcus Rodriguez</h3>
                         <p class="text-green-600 font-semibold mb-1">CTO & Co-Founder</p>
@@ -117,13 +104,9 @@
                     </div>
 
                     <!-- Team Member 3 -->
-                    <div class="text-center animate-in fade-in zoom-in duration-800 delay-200">
-                        <div class="aspect-square bg-gradient-to-br from-purple-100 to-purple-200 rounded-full flex items-center justify-center border-4 border-white shadow-lg mb-4 mx-auto" style="width: 150px; height: 150px;">
-                            <div class="text-purple-600">
-                                <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z"></path>
-                                </svg>
-                            </div>
+                    <div class="text-center animate-in fade-in zoom-in duration-800 delay-200 hover:scale-105 transition-all">
+                        <div class="aspect-square bg-gradient-to-br from-purple-100 to-purple-200 rounded-full flex items-center justify-center border-4 border-white shadow-lg mb-4 mx-auto hover:border-green-500 hover:shadow-green-500 hover:shadow-lg hover:z-10" style="width: 150px; height: 150px;">
+                            <img src="../../assets/about/team/member2.png" alt="Banner" class="w-full h-full object-cover rounded-full animate-in fade-in slide-in-from-right-8 duration-800 delay-100" loading="lazy"></img>
                         </div>
                         <h3 class="text-xl font-bold text-gray-900 mb-2">Aisha Patel</h3>
                         <p class="text-green-600 font-semibold mb-1">Head of Engineering</p>
@@ -131,13 +114,9 @@
                     </div>
 
                     <!-- Team Member 4 -->
-                    <div class="text-center animate-in fade-in zoom-in duration-800 delay-300">
-                        <div class="aspect-square bg-gradient-to-br from-orange-100 to-orange-200 rounded-full flex items-center justify-center border-4 border-white shadow-lg mb-4 mx-auto" style="width: 150px; height: 150px;">
-                            <div class="text-orange-600">
-                                <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                                </svg>
-                            </div>
+                    <div class="text-center animate-in fade-in zoom-in duration-800 delay-300 hover:scale-105 transition-all">
+                        <div class="aspect-square bg-gradient-to-br from-orange-100 to-orange-200 rounded-full flex items-center justify-center border-4 border-white shadow-lg mb-4 mx-auto hover:border-green-500 hover:shadow-green-500 hover:shadow-lg hover:z-10" style="width: 150px; height: 150px;">
+                            <img src="../../assets/about/team/member4.png" alt="Banner" class="w-full h-full object-cover rounded-full animate-in fade-in slide-in-from-right-8 duration-800 delay-100" loading="lazy"></img>
                         </div>
                         <h3 class="text-xl font-bold text-gray-900 mb-2">David Kim</h3>
                         <p class="text-green-600 font-semibold mb-1">VP of Product</p>
@@ -147,18 +126,10 @@
             </div>
 
             <!-- Values Section -->
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div ref="valuesSection" class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center opacity-0">
                 <!-- Left Image Placeholder -->
                 <div class="relative animate-in fade-in slide-in-from-left-8 duration-800 order-2 lg:order-1">
-                    <div class="aspect-video bg-gradient-to-br from-gray-100 to-gray-200 rounded-2xl flex items-center justify-center border-2 border-dashed border-gray-300">
-                        <div class="text-center text-gray-500">
-                            <svg class="w-16 h-16 mx-auto mb-4 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
-                            </svg>
-                            <p class="font-semibold">Office Environment</p>
-                            <p class="text-sm">Modern workspace or company culture</p>
-                        </div>
-                    </div>
+                    <img src="../../assets/about/office2.png" alt="Banner" class="w-full h-full object-cover rounded-2xl animate-in fade-in slide-in-from-right-8 duration-800 delay-100" loading="lazy"></img>
                 </div>
 
                 <!-- Right Content -->
@@ -214,7 +185,7 @@
     </div>
 
     <!-- Contact & Location Section -->
-    <div class="bg-gray-50 w-full py-20 px-6">
+    <div ref="contactSection" class="bg-gray-50 w-full py-20 px-6 opacity-0">
         <div class="max-w-6xl mx-auto">
             <!-- Section Header -->
             <div class="text-center mb-16 animate-in fade-in slide-in-from-top-4 duration-800">
@@ -359,7 +330,7 @@
                 </div>
             </div>
             <!-- Call to Action -->
-            <div class="bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl p-6 text-white text-center w-full mt-12">
+            <div ref="ctaSection" class="bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl p-6 text-white text-center w-full mt-12 opacity-0">
                         <h4 class="text-xl font-bold mb-2">Ready to Get Started?</h4>
                         <p class="text-green-100 mb-4">Schedule a demo and see how Stormgate can transform your business.</p>
                         <button class="bg-white text-green-600 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-all hover:scale-105">
@@ -368,8 +339,463 @@
                     </div>
         </div>
     </div>
+
+    <!-- Company Stats Section -->
+    <div ref="statsSection" class="bg-white w-full py-20 px-6 opacity-0">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Impact</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Numbers that showcase our growth and commitment to excellence
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center p-6 bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl">
+                    <div class="text-5xl font-bold text-green-600 mb-2">5000+</div>
+                    <p class="text-gray-700 font-semibold">Active Users</p>
+                    <p class="text-sm text-gray-600 mt-1">Across 50+ countries</p>
+                </div>
+                <div class="text-center p-6 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl">
+                    <div class="text-5xl font-bold text-blue-600 mb-2">99.9%</div>
+                    <p class="text-gray-700 font-semibold">Uptime SLA</p>
+                    <p class="text-sm text-gray-600 mt-1">Guaranteed reliability</p>
+                </div>
+                <div class="text-center p-6 bg-gradient-to-br from-purple-50 to-pink-50 rounded-xl">
+                    <div class="text-5xl font-bold text-purple-600 mb-2">1M+</div>
+                    <p class="text-gray-700 font-semibold">API Calls/Day</p>
+                    <p class="text-sm text-gray-600 mt-1">Processing millions daily</p>
+                </div>
+                <div class="text-center p-6 bg-gradient-to-br from-orange-50 to-yellow-50 rounded-xl">
+                    <div class="text-5xl font-bold text-orange-600 mb-2">24/7</div>
+                    <p class="text-gray-700 font-semibold">Support</p>
+                    <p class="text-sm text-gray-600 mt-1">Always here to help</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Timeline Section -->
+    <div ref="timelineSection" class="bg-gray-50 w-full py-20 px-6 opacity-0">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Journey</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Key milestones in our mission to revolutionize microservices
+                </p>
+            </div>
+
+            <div class="relative">
+                <!-- Timeline Line -->
+                <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-green-200"></div>
+
+                <!-- Timeline Items -->
+                <div class="space-y-12">
+                    <!-- 2020 -->
+                    <div class="relative flex items-center">
+                        <div class="flex-1 text-right pr-8">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">2020</h3>
+                            <h4 class="text-lg font-semibold text-green-600 mb-2">Company Founded</h4>
+                            <p class="text-gray-600">Stormgate was born with a vision to democratize microservices for all businesses.</p>
+                        </div>
+                        <div class="w-6 h-6 bg-green-500 rounded-full border-4 border-white shadow-lg z-10"></div>
+                        <div class="flex-1 pl-8"></div>
+                    </div>
+
+                    <!-- 2021 -->
+                    <div class="relative flex items-center">
+                        <div class="flex-1 pr-8"></div>
+                        <div class="w-6 h-6 bg-blue-500 rounded-full border-4 border-white shadow-lg z-10"></div>
+                        <div class="flex-1 text-left pl-8">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">2021</h3>
+                            <h4 class="text-lg font-semibold text-blue-600 mb-2">First 1000 Users</h4>
+                            <p class="text-gray-600">Reached our first major milestone with 1000+ active users across 20 countries.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2022 -->
+                    <div class="relative flex items-center">
+                        <div class="flex-1 text-right pr-8">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">2022</h3>
+                            <h4 class="text-lg font-semibold text-purple-600 mb-2">Series A Funding</h4>
+                            <p class="text-gray-600">Secured $10M in Series A funding to accelerate growth and expand our team.</p>
+                        </div>
+                        <div class="w-6 h-6 bg-purple-500 rounded-full border-4 border-white shadow-lg z-10"></div>
+                        <div class="flex-1 pl-8"></div>
+                    </div>
+
+                    <!-- 2023 -->
+                    <div class="relative flex items-center">
+                        <div class="flex-1 pr-8"></div>
+                        <div class="w-6 h-6 bg-orange-500 rounded-full border-4 border-white shadow-lg z-10"></div>
+                        <div class="flex-1 text-left pl-8">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">2023</h3>
+                            <h4 class="text-lg font-semibold text-orange-600 mb-2">Global Expansion</h4>
+                            <p class="text-gray-600">Expanded to 50+ countries with enterprise-grade features and 99.9% uptime.</p>
+                        </div>
+                    </div>
+
+                    <!-- 2024 -->
+                    <div class="relative flex items-center">
+                        <div class="flex-1 text-right pr-8">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-2">2024</h3>
+                            <h4 class="text-lg font-semibold text-green-600 mb-2">5000+ Active Users</h4>
+                            <p class="text-gray-600">Celebrating 5000+ active users and processing over 1M API calls daily.</p>
+                        </div>
+                        <div class="w-6 h-6 bg-green-500 rounded-full border-4 border-white shadow-lg z-10 animate-pulse"></div>
+                        <div class="flex-1 pl-8"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </template> 
 <script setup>
+import { ref, onMounted, nextTick } from 'vue'
+import gsap from 'gsap'
+
+// Section refs
+const heroSection = ref(null)
+const storySection = ref(null)
+const teamSection = ref(null)
+const valuesSection = ref(null)
+const contactSection = ref(null)
+const ctaSection = ref(null)
+const statsSection = ref(null)
+const timelineSection = ref(null)
+
+// Hero Section Animation
+const animateHeroSection = () => {
+  if (!heroSection.value) return
+  
+  const tl = gsap.timeline({ defaults: { ease: 'power3.out' } })
+  
+  tl.to(heroSection.value, {
+    opacity: 1,
+    duration: 0.5
+  })
+  
+  tl.fromTo(
+    heroSection.value.querySelector('nav'),
+    { x: -30, opacity: 0 },
+    { x: 0, opacity: 1, duration: 0.6 },
+    '-=0.3'
+  )
+  
+  tl.fromTo(
+    heroSection.value.querySelectorAll('h1, p'),
+    { x: -40, opacity: 0 },
+    { x: 0, opacity: 1, stagger: 0.2, duration: 0.7 },
+    '-=0.4'
+  )
+}
+
+// Story Section Animation
+const animateStorySection = () => {
+  if (!storySection.value) return
+  
+  const tl = gsap.timeline({ defaults: { ease: 'power3.out' } })
+  
+  tl.to(storySection.value, {
+    opacity: 1,
+    duration: 0.5
+  })
+  
+  const leftContent = storySection.value.querySelector('.space-y-6')
+  tl.fromTo(
+    leftContent.querySelectorAll('h2, p'),
+    { x: -40, opacity: 0 },
+    { x: 0, opacity: 1, stagger: 0.15, duration: 0.7 },
+    '-=0.3'
+  )
+  
+  const badges = leftContent.querySelectorAll('.flex.items-center.gap-2')
+  tl.fromTo(
+    badges,
+    { y: 20, opacity: 0, scale: 0.9 },
+    { y: 0, opacity: 1, scale: 1, stagger: 0.1, duration: 0.6, ease: 'back.out(1.3)' },
+    '-=0.5'
+  )
+  
+  const rightImage = storySection.value.querySelector('.relative.animate-in')
+  tl.fromTo(
+    rightImage,
+    { x: 40, opacity: 0, scale: 0.95 },
+    { x: 0, opacity: 1, scale: 1, duration: 0.8 },
+    '-=0.7'
+  )
+}
+
+// Team Section Animation
+const animateTeamSection = () => {
+  if (!teamSection.value) return
+  
+  const tl = gsap.timeline({ defaults: { ease: 'power3.out' } })
+  
+  tl.to(teamSection.value, {
+    opacity: 1,
+    duration: 0.5
+  })
+  
+  tl.fromTo(
+    teamSection.value.querySelectorAll('.text-center.mb-16 > *'),
+    { y: 30, opacity: 0 },
+    { y: 0, opacity: 1, stagger: 0.15, duration: 0.6 },
+    '-=0.3'
+  )
+  
+  const teamMembers = teamSection.value.querySelectorAll('.grid > div')
+  tl.fromTo(
+    teamMembers,
+    { y: 50, opacity: 0, scale: 0.9 },
+    { y: 0, opacity: 1, scale: 1, stagger: 0.12, duration: 0.7, ease: 'back.out(1.4)' },
+    '-=0.4'
+  )
+  
+  const avatars = teamSection.value.querySelectorAll('.aspect-square')
+  tl.fromTo(
+    avatars,
+    { scale: 0, rotation: -180 },
+    { scale: 1, rotation: 0, stagger: 0.12, duration: 0.8, ease: 'elastic.out(1, 0.6)' },
+    '-=0.7'
+  )
+}
+
+// Values Section Animation
+const animateValuesSection = () => {
+  if (!valuesSection.value) return
+  
+  const tl = gsap.timeline({ defaults: { ease: 'power3.out' } })
+  
+  tl.to(valuesSection.value, {
+    opacity: 1,
+    duration: 0.5
+  })
+  
+  const leftImage = valuesSection.value.querySelector('.order-2')
+  tl.fromTo(
+    leftImage,
+    { x: -40, opacity: 0, rotateY: -10 },
+    { x: 0, opacity: 1, rotateY: 0, duration: 0.8 },
+    '-=0.3'
+  )
+  
+  const rightContent = valuesSection.value.querySelector('.order-1')
+  tl.fromTo(
+    rightContent.querySelectorAll('h2, p'),
+    { x: 40, opacity: 0 },
+    { x: 0, opacity: 1, stagger: 0.15, duration: 0.7 },
+    '-=0.6'
+  )
+  
+  const valueItems = rightContent.querySelectorAll('.flex.items-start.gap-4')
+  tl.fromTo(
+    valueItems,
+    { x: 30, opacity: 0 },
+    { x: 0, opacity: 1, stagger: 0.15, duration: 0.6 },
+    '-=0.5'
+  )
+}
+
+// Contact Section Animation
+const animateContactSection = () => {
+  if (!contactSection.value) return
+  
+  const tl = gsap.timeline({ defaults: { ease: 'power3.out' } })
+  
+  tl.to(contactSection.value, {
+    opacity: 1,
+    duration: 0.5
+  })
+  
+  tl.fromTo(
+    contactSection.value.querySelectorAll('.text-center.mb-16 > *'),
+    { y: 30, opacity: 0 },
+    { y: 0, opacity: 1, stagger: 0.15, duration: 0.6 },
+    '-=0.3'
+  )
+  
+  const mapSection = contactSection.value.querySelector('.grid > div:first-child')
+  tl.fromTo(
+    mapSection,
+    { x: -40, opacity: 0, scale: 0.95 },
+    { x: 0, opacity: 1, scale: 1, duration: 0.8 },
+    '-=0.4'
+  )
+  
+  const contactInfo = contactSection.value.querySelector('.space-y-8')
+  tl.fromTo(
+    contactInfo.querySelectorAll('.flex.items-center.gap-4'),
+    { x: 40, opacity: 0 },
+    { x: 0, opacity: 1, stagger: 0.1, duration: 0.6 },
+    '-=0.6'
+  )
+}
+
+// CTA Section Animation
+const animateCtaSection = () => {
+  if (!ctaSection.value) return
+  
+  const tl = gsap.timeline({ defaults: { ease: 'power3.out' } })
+  
+  tl.fromTo(
+    ctaSection.value,
+    { y: 40, opacity: 0, scale: 0.95 },
+    { y: 0, opacity: 1, scale: 1, duration: 0.8, ease: 'back.out(1.3)' }
+  )
+}
+
+// Stats Section Animation
+const animateStatsSection = () => {
+  if (!statsSection.value) return
+  
+  const tl = gsap.timeline({ defaults: { ease: 'power3.out' } })
+  
+  tl.to(statsSection.value, {
+    opacity: 1,
+    duration: 0.5
+  })
+  
+  tl.fromTo(
+    statsSection.value.querySelectorAll('.text-center.mb-16 > *'),
+    { y: 30, opacity: 0 },
+    { y: 0, opacity: 1, stagger: 0.15, duration: 0.6 },
+    '-=0.3'
+  )
+  
+  const statCards = statsSection.value.querySelectorAll('.grid > div')
+  tl.fromTo(
+    statCards,
+    { y: 50, opacity: 0, scale: 0.9 },
+    { y: 0, opacity: 1, scale: 1, stagger: 0.1, duration: 0.7, ease: 'back.out(1.5)' },
+    '-=0.4'
+  )
+  
+  // Animate numbers
+  statCards.forEach((card, index) => {
+    const number = card.querySelector('.text-5xl')
+    if (number) {
+      const text = number.textContent
+      const numValue = parseInt(text.replace(/[^0-9]/g, ''))
+      
+      if (!isNaN(numValue) && numValue > 0) {
+        gsap.fromTo(number,
+          { textContent: 0 },
+          {
+            textContent: numValue,
+            duration: 2,
+            delay: 0.5 + (index * 0.1),
+            snap: { textContent: 1 },
+            onUpdate: function() {
+              const val = Math.floor(this.targets()[0].textContent)
+              if (text.includes('+')) {
+                number.textContent = val.toLocaleString() + '+'
+              } else if (text.includes('%')) {
+                number.textContent = val + '%'
+              } else if (text.includes('M')) {
+                number.textContent = val + 'M+'
+              } else if (text.includes('/')) {
+                number.textContent = text
+              } else {
+                number.textContent = val.toLocaleString()
+              }
+            }
+          }
+        )
+      }
+    }
+  })
+}
+
+// Timeline Section Animation
+const animateTimelineSection = () => {
+  if (!timelineSection.value) return
+  
+  const tl = gsap.timeline({ defaults: { ease: 'power3.out' } })
+  
+  tl.to(timelineSection.value, {
+    opacity: 1,
+    duration: 0.5
+  })
+  
+  tl.fromTo(
+    timelineSection.value.querySelectorAll('.text-center.mb-16 > *'),
+    { y: 30, opacity: 0 },
+    { y: 0, opacity: 1, stagger: 0.15, duration: 0.6 },
+    '-=0.3'
+  )
+  
+  const timelineLine = timelineSection.value.querySelector('.absolute.left-1\\/2')
+  tl.fromTo(
+    timelineLine,
+    { scaleY: 0, transformOrigin: 'top' },
+    { scaleY: 1, duration: 1.5 },
+    '-=0.4'
+  )
+  
+  const timelineItems = timelineSection.value.querySelectorAll('.space-y-12 > div')
+  tl.fromTo(
+    timelineItems,
+    { y: 40, opacity: 0 },
+    { y: 0, opacity: 1, stagger: 0.2, duration: 0.7 },
+    '-=1.2'
+  )
+  
+  const dots = timelineSection.value.querySelectorAll('.rounded-full.border-4')
+  tl.fromTo(
+    dots,
+    { scale: 0 },
+    { scale: 1, stagger: 0.2, duration: 0.5, ease: 'back.out(2)' },
+    '-=1.4'
+  )
+}
+
+// Setup Intersection Observers
+onMounted(() => {
+  const observerOptions = { threshold: 0.1 }
+  
+  const createObserver = (ref, animationFunc) => {
+    return new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animationFunc()
+          entry.target.observer?.unobserve(entry.target)
+        }
+      })
+    }, observerOptions)
+  }
+  
+  const heroObserver = createObserver(heroSection, animateHeroSection)
+  const storyObserver = createObserver(storySection, animateStorySection)
+  const teamObserver = createObserver(teamSection, animateTeamSection)
+  const valuesObserver = createObserver(valuesSection, animateValuesSection)
+  const contactObserver = createObserver(contactSection, animateContactSection)
+  const ctaObserver = createObserver(ctaSection, animateCtaSection)
+  const statsObserver = createObserver(statsSection, animateStatsSection)
+  const timelineObserver = createObserver(timelineSection, animateTimelineSection)
+  
+  nextTick(() => {
+    if (heroSection.value) {
+      animateHeroSection()
+    }
+    
+    const sections = [
+      { ref: storySection, observer: storyObserver },
+      { ref: teamSection, observer: teamObserver },
+      { ref: valuesSection, observer: valuesObserver },
+      { ref: contactSection, observer: contactObserver },
+      { ref: ctaSection, observer: ctaObserver },
+      { ref: statsSection, observer: statsObserver },
+      { ref: timelineSection, observer: timelineObserver }
+    ]
+    
+    sections.forEach(({ ref, observer }) => {
+      if (ref.value) {
+        observer.observe(ref.value)
+      }
+    })
+  })
+})
 </script>
 
 <style scoped>
