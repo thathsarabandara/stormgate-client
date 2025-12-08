@@ -53,7 +53,7 @@ A modern, enterprise-grade microservices platform built with Vue 3, designed to 
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/stormgate-client.git
+   git clone https://github.com/thathsarabandara/stormgate-client.git
    cd stormgate-client
    ```
 
@@ -67,7 +67,7 @@ A modern, enterprise-grade microservices platform built with Vue 3, designed to 
 3. **Configure environment variables**
    Create a `.env` file in the root directory:
    ```env
-   VITE_API_BASE_URL=https://api.stormgate.com
+   VITE_API_BASE_URL=https://stormgate-client-server.onrender.com
    VITE_APP_TITLE=Stormgate Platform
    ```
 
@@ -77,9 +77,6 @@ A modern, enterprise-grade microservices platform built with Vue 3, designed to 
    # or
    yarn dev
    ```
-
-5. **Open your browser**
-   Navigate to `http://localhost:5173` to view the application
 
 ## 🎯 Usage
 
@@ -224,7 +221,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ### Community
 - [Vue.js Community](https://vuejs.org/community/)
 - [Tailwind CSS Community](https://tailwindcss.com/community)
-- [GitHub Discussions](https://github.com/your-username/stormgate-client/discussions)
 
 ### Contact
 - **Email**: thathsaraaruapperuma@gmail.com
@@ -236,6 +232,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Built with ❤️ by the Thathsara Bandara**
 
-[🌐 Website](https://stormgate.com) • [📧 Email](thathsaraaruapperuma@gmail.com) •
+[🌐 Website](https://stormgate-client.vercel.app/) • [📧 Email](thathsaraaruapperuma@gmail.com) •
 
 </div>
