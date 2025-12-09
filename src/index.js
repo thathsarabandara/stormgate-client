@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import MainLayout from './components/layout/MainLayout.vue'
+import AdminLayout from './components/layout/AdminLayout.vue'
 import Login from './pages/auth/Login.vue'
 import Register from './pages/auth/Register.vue'
 import Dashboard from './pages/Dashboard.vue'
@@ -19,6 +20,16 @@ import Services from './pages/home/services.vue'
 import Pricing from './pages/home/pricing.vue'
 import About from './pages/home/About.vue'
 import FAQ from './pages/home/FAQ.vue'
+import UserProfile from './pages/user-profile/UserProfile.vue'
+import ApiKeys from './pages/user-profile/ApiKeys.vue'
+import ApiSandbox from './pages/user-profile/ApiSandbox.vue'
+import Billing from './pages/user-profile/Billing.vue'
+import AdminLogin from './pages/admin/AdminLogin.vue'
+import AdminDashboard from './pages/admin/AdminDashboard.vue'
+import UserManagement from './pages/admin/UserManagement.vue'
+import SystemMonitoring from './pages/admin/SystemMonitoring.vue'
+import BillingUsage from './pages/admin/BillingUsage.vue'
+import AuditLogs from './pages/admin/AuditLogs.vue'
 
 const routes = [
   { path: '/',
@@ -42,8 +53,6 @@ const routes = [
      },
     ],
    },
-
-  
   {
     path: '/service',
     component: MainLayout,  
@@ -55,6 +64,26 @@ const routes = [
       { path: 'cart-service', component: CartService },
       { path: 'order-service', component: OrderService },
       { path: 'payment-service', component: PaymentService },
+      { path: 'profile', component: UserProfile },
+      { path: 'api-keys', component: ApiKeys },
+      { path: 'api-sandbox', component: ApiSandbox },
+      { path: 'billing', component: Billing },
+    ],
+  },
+
+  {
+    path: '/admin/login',
+    component: AdminLogin
+  },
+  {
+    path: '/admin',
+    component: AdminLayout,
+    children: [
+      { path: 'dashboard', component: AdminDashboard },
+      { path: 'users', component: UserManagement },
+      { path: 'monitoring', component: SystemMonitoring },
+      { path: 'billing', component: BillingUsage },
+      { path: 'audit-logs', component: AuditLogs },
     ],
   },
 ]

@@ -50,5 +50,9 @@ const navLinks = [
   { label: 'Cart Service', icon: 'mdi:cart', path: '/service/cart-service' },
   { label: 'Order Service', icon: 'mdi:clipboard-list', path: '/service/order-service' },
   { label: 'Payment Service', icon: 'mdi:credit-card', path: '/service/payment-service' },
+  { label: 'API Keys', icon: 'mdi:key', path: '/service/api-keys' },
+  { label: 'API Sandbox', icon: 'mdi:test-tube', path: '/service/api-sandbox' },
+  { label: 'Billing', icon: 'mdi:currency-usd', path: '/service/billing' },
+  { label: 'Profile Settings', icon: 'mdi:account-circle', path: '/service/profile' },
 ]
 </script>
